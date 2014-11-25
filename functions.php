@@ -1,4 +1,6 @@
 <?php
+defined('ABSPATH') or die("No script kiddies please!");
+
 function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'header_color' , array(
             'default'     => '#D74E3E',

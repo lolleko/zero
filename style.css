@@ -101,17 +101,6 @@ a:visited {
 	position: fixed !important;
 	top: 0 !important;
 }
-.header-description{
-	position: absolute;
-	top: 90px;
-	left: 310px;
-	color: black;
-	width: 310px;
-	padding: 2px;
-	border-left: 8px solid rgba(85,85,85, 0.7);
-	background-color: #fff;
-	display: none;
-}
 #content-cntnr{
 	margin-top: 200px;
 	display: inline-block;
