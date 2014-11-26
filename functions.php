@@ -80,13 +80,40 @@ function zero_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'zero_enqueue_scripts' );
 
 function zero_widgets_init() {
- 
+    //primary 
     register_sidebar( array(
-        'name' => 'Primary Sidebar',
-        'id' => 'primary_sidebar',
-        'before_widget' => '<div class="sidebar-widget">',
+        'name' => 'Primary Widget Area',
+        'id' => 'primary_widget_area',
+        'before_widget' => '<div class="footer-widget">',
         'after_widget' => '</div>',
-        'before_title' => '<div class="sidebar-title">',
+        'before_title' => '<div class="footer-title">',
+        'after_title' => '</div>',
+    ) );
+    //footer1
+    register_sidebar( array(
+        'name' => 'First Footer Widget Area',
+        'id' => 'footer_widget_area1',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="footer-title">',
+        'after_title' => '</div>',
+    ) );
+    //footer2
+    register_sidebar( array(
+        'name' => 'Second Footer Widget Area',
+        'id' => 'footer_widget_area2',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="footer-title">',
+        'after_title' => '</div>',
+    ) );
+    //footer3
+    register_sidebar( array(
+        'name' => 'Third Footer Widget Area',
+        'id' => 'footer__widget_area3',
+        'before_widget' => '<div class="footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="footer-title">',
         'after_title' => '</div>',
     ) );
 }
