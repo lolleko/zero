@@ -21,17 +21,18 @@ Text Domain: zero
 body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
     margin:0;
-    height: 100%;
     min-width: 1000px;
     min-height: 800px;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
-#page-cntnr{
-    margin-right: 250px;
+#content-wrap{
+	margin-right: 250px;
+	min-height: 100%;
 }
 a:link,
 a:hover,
@@ -59,7 +60,7 @@ a:visited {
 }
 #header-inner ul{
 	margin-top: 0;
-		list-style-type: none;
+	list-style-type: none;
 }
 .menu-item{
 	min-width: 100px;
@@ -168,6 +169,7 @@ a:visited {
 	height: 100%;
 	width: 230px;
 	margin-top: 210px;
+	margin-bottom: 20px;
 }
 .sidebar-title{
 	font-weight: bold;
@@ -179,8 +181,12 @@ a:visited {
 #footer-cntnr{
     background-color: rgb(255,255,255);
     height: 64px;
-    clear:left;
     width: 100%;
     text-align: center;
     color: #777;
+    padding-top: 20px;
+}
+/*widget realated*/
+.sidebar-widget input{
+	max-width: 200px;
 }
