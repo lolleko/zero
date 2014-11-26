@@ -61,6 +61,9 @@ function zero_customize_css()
             .sidebar-widget{
                 border-left: <?php echo get_theme_mod('main_color'); ?> solid 5px;
             }
+            #calendar_wrap a{
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
          </style>
     <?php
 }
