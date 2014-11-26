@@ -2,7 +2,7 @@
 get_header();
 get_sidebar();
 ?>
-		<div id="page-cntnr">
+		<div id="content-wrap">
 			<div id="content-cntnr">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="post-default">
