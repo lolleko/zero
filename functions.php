@@ -84,9 +84,9 @@ function zero_widgets_init() {
     register_sidebar( array(
         'name' => 'Primary Widget Area',
         'id' => 'primary_widget_area',
-        'before_widget' => '<div class="footer-widget">',
+        'before_widget' => '<div class="sidebar-widget">',
         'after_widget' => '</div>',
-        'before_title' => '<div class="footer-title">',
+        'before_title' => '<div class="sidebar-title">',
         'after_title' => '</div>',
     ) );
     //footer1
@@ -110,7 +110,7 @@ function zero_widgets_init() {
     //footer3
     register_sidebar( array(
         'name' => 'Third Footer Widget Area',
-        'id' => 'footer__widget_area3',
+        'id' => 'footer_widget_area3',
         'before_widget' => '<div class="footer-widget">',
         'after_widget' => '</div>',
         'before_title' => '<div class="footer-title">',

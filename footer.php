@@ -1,3 +1,5 @@
 		<div id="footer-cntnr">
-			Footer				
+			<?php get_sidebar( 'footer' ); ?>
 		</div>
+	</body>
+</html>
