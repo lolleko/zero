@@ -41,13 +41,19 @@ function zero_customize_css()
     ?>
          <style type="text/css">
             body,html{
-                background-color: #<?php echo get_theme_mod('background_color'); ?>;
+                /*background-color: #<?php echo get_theme_mod('background_color'); ?>;*/
+            }
+            .more-link{
+                color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
             .header-title-inner
             {
                 color: #fff;
                 background-color: <?php echo get_theme_mod('header_color'); ?>;
                 padding: 2px;
+            }
+            .post h2{
+                color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .post-information{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
@@ -123,3 +129,8 @@ function zero_register_menu() {
   register_nav_menu('header-menu',__( 'Header Menu' ));
 }
 add_action( 'init', 'zero_register_menu' );
+
+function modify_read_more_link() {
+    return '<a class="more-link" href="' . get_permalink() . '">&#8627;</a>';
+}
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
