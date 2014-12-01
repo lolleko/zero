@@ -17,3 +17,6 @@
 				</a>
 			</span>
 		</div>
+<?php get_sidebar(); ?>
+		<div id="content-wrap">
+			<div id="content-cntnr">

@@ -41,7 +41,7 @@ function zero_customize_css()
     ?>
          <style type="text/css">
             body,html{
-                /*background-color: #<?php echo get_theme_mod('background_color'); ?>;*/
+                background-color: #<?php echo get_theme_mod('background_color'); ?>;
             }
             .more-link{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
@@ -55,11 +55,8 @@ function zero_customize_css()
             .post h2{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .post-information{
-                background-color: <?php echo get_theme_mod('main_color'); ?>;
-            }
             .tag a{
-                color: <?php echo get_theme_mod('main_color'); ?>;
+                background-color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .sidebar-title{
                 color: <?php echo get_theme_mod('main_color'); ?>;
@@ -79,8 +76,9 @@ function zero_enqueue_scripts() {
     wp_enqueue_script(
         'animation',
         get_template_directory_uri() . '/js/animation.js',
-        array('jquery')
+        array('jquery','masonry')
     );
+    wp_enqueue_script('masonry');
 }
  
 add_action( 'wp_enqueue_scripts', 'zero_enqueue_scripts' );
