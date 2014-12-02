@@ -22,7 +22,8 @@ body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
     margin:0;
     min-width: 1200px;
-    min-height: 800px;
+    min-height: 1000px;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     box-sizing: border-box;
@@ -30,8 +31,10 @@ body,html{
 }
 
 #content-wrap{
-	margin-right: 250px;
+	margin-right: 290px;
 	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 }
 a:link,
 a:hover,
@@ -217,9 +220,10 @@ a:visited {
 	float: right;
 	z-index: 3;
 	height: 100%;
-	width: 230px;
+	width: 280px;
 	margin-top: 210px;
 	margin-bottom: 20px;
+	overflow: hidden;
 }
 .sidebar-title{
 	font-weight: bold;
@@ -243,16 +247,21 @@ a:visited {
 	width: 100%;
 }
 #footer-widget-area1{
+	float: left;
 	display: inline-block;
 	margin-left: 10px;
+	width: 32%;
 }
 #footer-widget-area2{
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 1%;
+	width: 32%;
 }
 #footer-widget-area3{
-	margin-right: 10px;
+	display: inline-block;
+	margin-right: 1%;
 	float: right;
+	width: 32%;
 }
 #footer-widget-area3 .footer-widget{
 	float: right;
