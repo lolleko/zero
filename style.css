@@ -112,15 +112,16 @@ a:visited {
 	width: 100%;
 }
 .post-default{
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
 }
 .post-information{
-	display: inline-block;
+	display: none;
 	width: 80px;
 	min-height: 300px;
 	text-align: center;
-	border-right: 4px #d74e3e solid;
+	margin-right: -5px;
 	background-color: rgba(85,85,85, 0.7);
 }
 .post-author-cntnr{
@@ -142,6 +143,23 @@ a:visited {
 	padding-right: 2px;
 	min-height: 180px;
 }
+.post-footer{
+	background-color: rgba(85,85,85, 0.7);
+	width: 730px;
+	height: 20px;
+	display: none;
+	padding-left: 8px;
+	padding-right: 8px;
+	color: white;
+	font-family: BebasKai;
+}
+.post-footer-ainfo{
+	display: inline-block;
+}
+.post-footer-dinfo{
+	display: inline-block;
+	float: right;
+}
 .tag{
 	display: inline-block;
 	margin-left: 2px;
@@ -159,16 +177,29 @@ a:visited {
 	background-color: white;
 	display: inline-block;
 	width: 650px;
-	min-height: 300px;
-	margin-left: -5px;
+	min-height: 150px;
 	vertical-align:top;
 	padding-left: 8px;
 	padding-right: 8px;
 }
+.post-small{
+	width: 730px;
+}
 .post img{
+	display: block;
 	width: 666px;
 	margin-left: -8px;
 	height: auto;
+}
+p:only-child{
+	margin: 0;
+}
+.post blockquote:only-child{
+	height: 100%;
+	min-height: 100px;
+	width: 666px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .post blockquote {
 	margin-left: -8px;

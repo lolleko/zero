@@ -24,11 +24,21 @@ get_header();
 			 	<?php else : ?>
 			 	<div class="post">
 			 	<?php endif; ?>
+			 	<?php if ( !empty(get_the_title()) ) : ?>
 				 	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<?php endif; ?>
 				 	<div class="entry">
 				 		<?php the_content(); ?>
 				 	</div>
 			 	</div>
+			 	<div class="post-footer">
+			 		<div class="post-footer-ainfo">
+						<?php the_author_posts_link(); ?>
+					</div>
+					<div class="post-footer-dinfo">
+						<?php echo get_the_date(); ?>
+					</div>
+				</div>
 			</div>
 		<?php endwhile; else : ?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>

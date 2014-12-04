@@ -9,20 +9,19 @@ jQuery(document).ready(function($) {
 	  	itemSelector: '.post-default'
 	});
 
-	/*$('.post-default').each(function( index ) {
+	$('.post-default').each(function( index ) {
 		var postH = $( this ).height();
 		console.log(index + ': ' + postH);
 		$('.post-information').each(function( indexi ) {
-			if (postH <= 300) {
-				console.log(indexi + " :" + $(this).height())
-				$('.post-information').eq(index).css('display','none');
-				$('.post').eq(index).css('width','728px');
-				$('.post').eq(index).css('margin-left','1px');
-				$('.post').eq(index).css('border-left','4px #d74e3e solid');
-
+			if (postH <= 324) {
+				$('.post-footer').eq(index).css('display','block');
+				$('.post').eq(index).addClass('post-small');
+			} else {
+				$('.post-information').eq(index).css('display','inline-block');
 			}
+			msnry.layout();
 		});
-	});*/
+	});
 
 	$(window).scroll(function(){
   		
@@ -37,5 +36,13 @@ jQuery(document).ready(function($) {
 		var headerInner = $('#header-inner');
 		headerInner.css('margin-left', $( document ).width()/2 - headerInner.width()/2);
 	});
+
+	
+
+	msnry.on( 'layoutComplete', function( msnryInstance, laidOutItems ) {
+  		msnry.layout();
+	});
+
+
 });
 
