@@ -12,15 +12,10 @@ jQuery(document).ready(function($) {
 	$('.post-default').each(function( index ) {
 		var postH = $( this ).height();
 		console.log(index + ': ' + postH);
-		$('.post-information').each(function( indexi ) {
-			if (postH <= 324) {
-				$('.post-footer').eq(index).css('display','block');
-				$('.post').eq(index).addClass('post-small');
-			} else {
-				$('.post-information').eq(index).css('display','inline-block');
-			}
-			msnry.layout();
-		});
+		if (postH >= 324) {
+			$('.post-footer').eq(index).css('display','block');
+		}
+		msnry.layout();
 	});
 
 	$(window).scroll(function(){
@@ -28,7 +23,7 @@ jQuery(document).ready(function($) {
      	scroll = $(window).scrollTop();
 
      	var headerTitle = $('.header-title-cntnr');
-		if (scroll >= 90) headerTitle.addClass('header-title-fixed');
+		if (scroll >= 78) headerTitle.addClass('header-title-fixed');
   		else headerTitle.removeClass('header-title-fixed');
 	});
 

@@ -46,7 +46,7 @@ a:visited {
 #header-cntnr{
 	background-color: rgba(85,85,85, 0.7);
 	position: fixed;
-	top: 0;
+	margin-top: -68px;
 	left: 0;
 	right: 0;
 	min-width: 1182px;
@@ -75,23 +75,24 @@ a:visited {
 	display: inline-block;
 }
 .menu-item:hover{
-	border-bottom: rgba(255,255,255,0.5) 4px solid;
 	cursor: pointer;
 }
-.menu-item:active,
-.hmenu-item:focus{
-	background: -moz-linear-gradient(top,  rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.2) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(100%,rgba(255,255,255,0.2)));
-	background: -webkit-linear-gradient(top,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0.2) 100%);
-	background: -o-linear-gradient(top,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0.2) 100%);
-	background: -ms-linear-gradient(top,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0.2) 100%);
-	background: linear-gradient(to bottom,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0.2) 100%);
+#header-image-cntnr{
+	margin-top: 68px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 200px;
+	width: 770px;
+}
+#header-image{	
+	max-width: 770px;
+	max-height: 200px;
 }
 .header-title-cntnr{
 	position: absolute;
 	font-size: 56px;
-	top: 90px;
-	left: 10px;
+	margin-top: 20px;
+	left: 40px;
 	max-width: 400px;
 	z-index: 2;
 }
@@ -104,9 +105,9 @@ a:visited {
 	margin-top: 10px !important;
 	position: fixed !important;
 	top: 0 !important;
+	left: 10px !important;
 }
 #content-cntnr{
-	margin-top: 200px;
 	display: inline-block;
 	padding-bottom: 200px;
 	width: 100%;
@@ -116,49 +117,50 @@ a:visited {
 	margin-left: 20px;
 	float: left;
 }
-.post-information{
+.post-footer{
+	background:#fff;
+	color: #383838;
+	font-size: 16px;
+	width: 762px;
+	height: 32px;
 	display: none;
-	width: 80px;
-	min-height: 300px;
-	text-align: center;
-	margin-right: -5px;
-	background-color: rgba(85,85,85, 0.7);
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-family: BebasKai;
 }
 .post-author-cntnr{
 	display: inline-block;
+	float: left;
+	width: 33%;
+	vertical-align: center;
 }
 .post-avatar-cntnr{
-	margin-top: 8px;
+	float: left;
+	display: inline-block;
 }
 .post-ainfo-cntnr{
-	font-family: BebasKai;
-	color: white;
+	float: left;
+	margin-left: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	margin-top: 5px;
 }
 .post-dinfo-cntnr{
-	font-family: BebasKai;
-	color: white;
-	font-size: 12px;
-}
-.post-tags-cntnr{
-	padding-right: 2px;
-	min-height: 180px;
-}
-.post-footer{
-	background-color: rgba(85,85,85, 0.7);
-	width: 730px;
-	height: 20px;
-	display: none;
-	padding-left: 8px;
-	padding-right: 8px;
-	color: white;
-	font-family: BebasKai;
-}
-.post-footer-ainfo{
-	display: inline-block;
-}
-.post-footer-dinfo{
 	display: inline-block;
 	float: right;
+	text-align: right;
+	font-size: 16px;
+	font-weight: bold;
+	width: 33%;
+	margin-top: 5px;
+}
+.post-tags-cntnr{
+	display: inline-block;
+	width: 33%;
+	margin-top: 4px;
 }
 .tag{
 	display: inline-block;
@@ -166,9 +168,11 @@ a:visited {
 	margin-top: 2px;
 }
 .tag a{
-	font-size: 12px;
+	font-size: 16px;
 	width: auto;
 	color: white;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 .avatar{
 	border-radius: 50%;
@@ -176,37 +180,32 @@ a:visited {
 .post{
 	background-color: white;
 	display: inline-block;
-	width: 650px;
+	width: 730px;
 	min-height: 150px;
 	vertical-align:top;
-	padding-left: 8px;
-	padding-right: 8px;
-}
-.post-small{
-	width: 730px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
 }
 .post img{
 	display: block;
-	width: 666px;
-	margin-left: -8px;
+	width: 770px;
+	margin-left: -20px;
 	height: auto;
-}
-p:only-child{
-	margin: 0;
 }
 .post blockquote:only-child{
 	height: 100%;
 	min-height: 100px;
-	width: 666px;
+	width: 690px;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 .post blockquote {
-	margin-left: -8px;
+	margin-left: -20px;
 	font-family: Georgia, serif;
 	font-size: 18px;
 	font-style: italic;
-	width: 586px;
+	width: 690px;
 	line-height: 1.45;
 	padding-top: 40px;
 	padding-bottom: 20px;
@@ -238,9 +237,9 @@ p:only-child{
 }
 
 .post iframe {
-	margin-left: -8px;
-	width: 666px;
-	height: 375px;
+	margin-left: -20px;
+	width: 770px;
+	height: 433px;
 }
 .more-link{
 	font-weight: bolder;
@@ -252,7 +251,7 @@ p:only-child{
 	z-index: 3;
 	height: 100%;
 	width: 280px;
-	margin-top: 210px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }

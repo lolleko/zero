@@ -17,6 +17,9 @@
 				</a>
 			</span>
 		</div>
+		<div id="header-image-cntnr">
+			<img id="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+		</div>
 <?php get_sidebar(); ?>
 		<div id="content-wrap">
 			<div id="content-cntnr">

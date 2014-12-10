@@ -67,6 +67,11 @@ function zero_customize_css()
             #calendar_wrap a{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
+            .menu-item:hover,
+            .menu-item:active,
+            .hmenu-item:focus{
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
          </style>
     <?php
 }
@@ -132,3 +137,15 @@ function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '">&#8627;</a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
+
+$headerArgs = array(
+    'width'         => 770,
+    'height'        => 200,
+);
+add_theme_support( 'custom-header', $headerArgs );
+
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
