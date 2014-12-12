@@ -3,20 +3,28 @@ Theme Name: Zero
 Theme URI: http://localhost/wordpress
 Author: Lolle
 Author URI: http://localhost/
-Description: Clean Modern sleek theme.
+Description: Clean Modern sleek theme. A mix of pinterest and usual.
 Version: 0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
 Text Domain: zero
 */
 @font-face {
 	font-family: BebasKai;  
 	src: local('BebasKai-Regular'), 
-		url("fonts/BebasKai-Regular.otf") format('opentype');  
+		 url("fonts/BebasKai-Regular.otf") format('opentype');  
 	font-weight: normal;  
 }
 
+@font-face {
+	font-family: FjordOne;  
+	src: local('FjordOne-Regular'), 
+		 url("fonts/FjordOne-Regular.otf") format('truetype');  
+	font-weight: normal;  
+}
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
 
 body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
@@ -118,16 +126,14 @@ a:visited {
 	float: left;
 }
 .post-footer{
-	background:#fff;
+	background-color: #fff;
 	color: #383838;
 	font-size: 16px;
 	width: 762px;
-	height: 32px;
-	display: none;
 	padding-left: 4px;
 	padding-right: 4px;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 	font-family: BebasKai;
 }
 .post-author-cntnr{
@@ -136,31 +142,21 @@ a:visited {
 	width: 33%;
 	vertical-align: center;
 }
-.post-avatar-cntnr{
-	float: left;
-	display: inline-block;
-}
 .post-ainfo-cntnr{
 	float: left;
-	margin-left: 4px;
-	font-size: 16px;
-	font-weight: bold;
+	margin-left: 6px;
 	display: inline-block;
-	margin-top: 5px;
 }
 .post-dinfo-cntnr{
 	display: inline-block;
 	float: right;
 	text-align: right;
-	font-size: 16px;
-	font-weight: bold;
 	width: 33%;
-	margin-top: 5px;
 }
 .post-tags-cntnr{
+	text-align: center;
 	display: inline-block;
 	width: 33%;
-	margin-top: 4px;
 }
 .tag{
 	display: inline-block;
@@ -185,7 +181,13 @@ a:visited {
 	vertical-align:top;
 	padding-left: 20px;
 	padding-right: 20px;
-	text-align: justify;
+}
+.post h2{
+	font-family: 'Open Sans', sans-serif;
+}
+.post p{
+	margin-top: 32px;
+	margin-bottom: 32px;
 }
 .post img{
 	display: block;
@@ -212,10 +214,9 @@ a:visited {
 	padding-left: 40px;
 	padding-right: 40px;
 	position: relative;
-	color: #383838;
-	background:#ececec;
+	color: #fff;
+	background-color: #D74E3E;
 }
-
 .post blockquote:before {
 	display: block;
 	content: "\201C";
@@ -226,7 +227,7 @@ a:visited {
 }
 
 .post blockquote cite {
-	color: #999999;
+	color: #383838;
 	font-size: 14px;
 	display: block;
 	margin-top: 10px;
@@ -240,6 +241,10 @@ a:visited {
 	margin-left: -20px;
 	width: 770px;
 	height: 433px;
+}
+.entry{
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5em;
 }
 .more-link{
 	font-weight: bolder;

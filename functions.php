@@ -2,36 +2,14 @@
 defined('ABSPATH') or die("No script kiddies please!");
 
 function zero_customize_register( $wp_customize ) {
-    $wp_customize->add_setting( 'header_color' , array(
-            'default'     => '#D74E3E',
-            'transport'   => 'refresh',
-    ) );
     $wp_customize->add_setting( 'main_color' , array(
             'default'     => '#D74E3E',
             'transport'   => 'refresh',
     ) );
-    $wp_customize->add_setting( 'background_color' , array(
-            'default'     => '#c4b37b',
-            'transport'   => 'refresh',
-    ) );
-    $wp_customize->add_section( 'color' , array(
-            'title'      => __( 'Color', 'mytheme' ),
-            'priority'   => 30,
-    ) );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'logo_color', array(
-            'label'        => __( 'Logo Color', 'mytheme' ),
-            'section'    => 'color',
-            'settings'   => 'header_color',
-    ) ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_color', array(
-            'label'        => __( 'Main Color', 'mytheme' ),
-            'section'    => 'color',
+            'label'        => __( 'Main Color', 'zero' ),
+            'section'    => 'colors',
             'settings'   => 'main_color',
-    ) ) );
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
-            'label'        => __( 'Background Color', 'mytheme' ),
-            'section'    => 'color',
-            'settings'   => 'background_color',
     ) ) );
 }
 add_action( 'customize_register', 'zero_customize_register' );
@@ -40,16 +18,13 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
-            body,html{
-                background-color: #<?php echo get_theme_mod('background_color'); ?>;
-            }
             .more-link{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
             .header-title-inner
             {
                 color: #fff;
-                background-color: <?php echo get_theme_mod('header_color'); ?>;
+                background-color: <?php echo '#' . get_header_textcolor(); ?>;
                 padding: 2px;
             }
             .post h2{
@@ -143,6 +118,13 @@ $headerArgs = array(
     'height'        => 200,
 );
 add_theme_support( 'custom-header', $headerArgs );
+
+$backgroundArgs = array(
+    'default-color' => '000000',
+);
+add_theme_support( 'custom-background', $backgroundArgs );
+
+add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote' ) );
 
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);

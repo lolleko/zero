@@ -9,15 +9,6 @@ jQuery(document).ready(function($) {
 	  	itemSelector: '.post-default'
 	});
 
-	$('.post-default').each(function( index ) {
-		var postH = $( this ).height();
-		console.log(index + ': ' + postH);
-		if (postH >= 324) {
-			$('.post-footer').eq(index).css('display','block');
-		}
-		msnry.layout();
-	});
-
 	$(window).scroll(function(){
   		
      	scroll = $(window).scrollTop();

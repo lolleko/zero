@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body class="custom-background">
 		<div id ="header-cntnr">
 			<div id="header-inner">
 				<?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
@@ -18,7 +18,9 @@
 			</span>
 		</div>
 		<div id="header-image-cntnr">
-			<img id="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			<a class="header-image-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				<img id="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+			</a>
 		</div>
 <?php get_sidebar(); ?>
 		<div id="content-wrap">
