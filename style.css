@@ -242,9 +242,19 @@ a:visited {
 	width: 770px;
 	height: 433px;
 }
+.post-content-title {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.post:hover .post-content-title {
+	display: block;
+}
 .entry{
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5em;
+	position: relative;
 }
 .more-link{
 	font-weight: bolder;
