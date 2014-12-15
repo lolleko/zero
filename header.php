@@ -23,5 +23,5 @@
 			</a>
 		</div>
 <?php get_sidebar(); ?>
-		<div id="content-wrap">
-			<div id="content-cntnr">
+		<div id="page-wrap">
+			<div id="page-cntnr">

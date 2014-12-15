@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	var headerInner = $('#header-inner');
 	headerInner.css('margin-left', $( document ).width()/2 - headerInner.width()/2);
 
-	var container = document.querySelector('#content-cntnr');
+	var container = document.querySelector('#page-cntnr');
 	var msnry = new Masonry( container, {
 	  	// options...
 	  	itemSelector: '.post-default'

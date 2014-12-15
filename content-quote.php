@@ -1,11 +1,11 @@
 			<div class="post-default">
 			 	<div class="post">
-				 	<div class="content-image">
-				 		<div class="post-image-title-cntnr post-fade-cntnr">
-				 			<h2 class="post-image-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				 	<div class="content-quote">
+				 		<div class="post-quote-title-cntnr post-fade-cntnr">
+				 			<h2 class="post-quote-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 				 		</div>
 				 		<?php the_content(); ?>
-				 		<div class="post-image-footer-cntnr post-fade-cntnr">
+				 		<div class="post-quote-footer-cntnr post-fade-cntnr">
 				 			<div class="post-author-cntnr">
 								<div class="post-ainfo-cntnr">
 									<?php the_author_posts_link(); ?>
