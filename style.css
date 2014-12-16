@@ -43,12 +43,11 @@ a:visited {
 	color: inherit;
     text-decoration: none;
 }
-.custom-background{
-	  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);  
+.custom-background{s
+	-webkit-background-size: cover;  
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 /*Document END*/
 
@@ -68,7 +67,6 @@ a:visited {
 
 /*Header*/
 #header-cntnr{
-	background-color: rgba(85,85,85, 0.7);
 	position: fixed;
 	margin-top: -68px;
 	left: 0;
@@ -80,7 +78,6 @@ a:visited {
 
 #header-inner{
 	display: inline-block;
-	color: white;
 	font-family: BebasKai;
 	font-size: 18px;
 }
@@ -126,9 +123,9 @@ a:visited {
 }
 .header-title-fixed{
 	font-size: 24px !important;
-	margin-top: 10px !important;
+	margin-top: -58px !important;
 	position: fixed !important;
-	top: 0 !important;
+	top: initial !important;
 	left: 10px !important;
 }
 /*Header END*/
@@ -138,7 +135,6 @@ a:visited {
 	margin-top: 20px;
 	margin-left: 20px;
 	float: left;
-	background-color: white;
 	width: 770px;
 }
 .post{
@@ -160,8 +156,6 @@ a:visited {
 }
 /*Post Footer*/
 .post-footer{
-	background-color: #fff;
-	color: #383838;
 	font-size: 16px;
 	width: 762px;
 	padding-left: 4px;
@@ -216,7 +210,7 @@ a:visited {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(85,85,85, 0.7);
+	text-shadow: 0px 0px 30px rgba(85, 85, 85, 1);
 }
 .post:hover .post-fade-cntnr {
 	display: block;
@@ -236,7 +230,7 @@ a:visited {
 }
 /*Default Content END*/
 
-/*Qoute Content*/
+/*Quote Content*/
 .content-quote blockquote {
 	margin-right: 0;
 	margin-left: 0;
@@ -253,7 +247,6 @@ a:visited {
 	padding-right: 40px;
 	position: relative;
 	color: #fff;
-	background-color: #D74E3E;
 }
 .content-quote blockquote:before {
 	display: block;
@@ -331,16 +324,13 @@ a:visited {
 }
 .sidebar-widget{
 	padding: 10px;
-	background-color: white;
 }
 /*Sidebar END*/
 
 /*Footer*/
 #footer-cntnr{
 	clear: right;
-    background-color: rgba(85,85,85, 0.7);
     min-height: 64px;
-    color: white;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -373,6 +363,16 @@ a:visited {
 /*Footer END*/
 
 /*Widget realated*/
-.sidebar-widget input{
-	max-width: 200px;
+.sidebar-widget #s{
+	width: 256px;
+	border: 1px solid black;
+	background-color: white;
+	margin-top: 4px;
+}
+.sidebar-widget input[type=submit]{
+	margin-top: 4px;
+	border: 1px solid black;
+}
+.sidebar-widget label[for=s]{
+	display: none;
 }

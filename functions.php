@@ -11,6 +11,27 @@ function zero_customize_register( $wp_customize ) {
             'section'    => 'colors',
             'settings'   => 'main_color',
     ) ) );
+
+    $wp_customize->add_setting( 'dark_light_theme' , array(
+            'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'dark_light_theme',
+        array(
+            'label'          => __( 'Dark or light?', 'zero' ),
+            'section'        => 'colors',
+            'settings'       => 'dark_light_theme',
+            'type'           => 'radio',
+            'choices'        => array(
+                'dark'   => __( 'Dark' ),
+                'light'  => __( 'Light' )
+            )
+        )
+    )
+    );
 }
 add_action( 'customize_register', 'zero_customize_register' );
 
@@ -18,6 +39,55 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
+            <?php
+            if(get_theme_mod('dark_light_theme') == 'dark') {
+                ?>
+                #header-cntnr{
+                    background-color: #222;
+                }
+                #header-inner{
+                    color:white;
+                }
+                .sidebar-widget{
+                    background-color: white;
+                }
+                #footer-cntnr{
+                    color: white;
+                    background-color: #222;
+                }
+                .post-default{
+                    background-color: white;
+                }
+                .post-footer{
+                    color: black;
+                }
+                <?php
+            } else {
+                ?>
+                #header-cntnr{
+                    background-color: #fff;
+                }
+                #header-inner{
+                    color:black;
+                }
+                .sidebar-widget{
+                    background-color: rgb(60,60,60);
+                    color: #DFDFDF;
+                }
+                #footer-cntnr{
+                    color: black;
+                    background-color: #fff;
+                }
+                .post-default{
+                    background-color: rgb(60,60,60);
+                    color: #DFDFDF;
+                }
+                .post-footer{
+                    color: #DFDFDF;
+                }
+                <?php
+            }
+            ?>
             .more-link{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
@@ -30,14 +100,14 @@ function zero_customize_css()
             .post h2{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
+            .content-quote blockquote{
+                background-color: <?php echo get_theme_mod('main_color'); ?>;
+            }
             .tag a{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .sidebar-title{
                 color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .sidebar-widget{
-                border-left: <?php echo get_theme_mod('main_color'); ?> solid 5px;
             }
             #calendar_wrap a{
                 color: <?php echo get_theme_mod('main_color'); ?>;
