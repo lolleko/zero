@@ -4,9 +4,14 @@ jQuery(document).ready(function($) {
 	headerInner.css('margin-left', $( document ).width()/2 - headerInner.width()/2);
 
 	var container = document.querySelector('#page-cntnr');
-	var msnry = new Masonry( container, {
-	  	// options...
-	  	itemSelector: '.post-default'
+
+
+	imagesLoaded( container, function() {
+		var msnry = new Masonry( container, {
+  			itemSelector: '.post-default'
+		});
+
+		$(".post-default").fadeIn();
 	});
 
 	$(window).scroll(function(){
@@ -25,9 +30,9 @@ jQuery(document).ready(function($) {
 
 	
 
-	msnry.on( 'layoutComplete', function( msnryInstance, laidOutItems ) {
+	/*msnry.on( 'layoutComplete', function( msnryInstance, laidOutItems ) {
   		msnry.layout();
-	});
+	});*/
 
 
 });

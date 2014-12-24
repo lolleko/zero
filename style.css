@@ -43,7 +43,7 @@ a:visited {
 	color: inherit;
     text-decoration: none;
 }
-.custom-background{s
+.custom-background{
 	-webkit-background-size: cover;  
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -53,7 +53,7 @@ a:visited {
 
 /*Main Content*/
 #page-wrap{
-	margin-right: 290px;
+	margin-right: 300px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -139,7 +139,6 @@ a:visited {
 }
 .post{
 	display: inline-block;
-	min-height: 150px;
 	vertical-align:top;
 }
 .post h2{
@@ -179,6 +178,7 @@ a:visited {
 	display: inline-block;
 	float: right;
 	text-align: right;
+	padding-right: 6px;
 	width: 33%;
 }
 .post-tags-cntnr{
@@ -207,10 +207,6 @@ a:visited {
 .post-fade-cntnr{
 	display: none;
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	text-shadow: 0px 0px 30px rgba(85, 85, 85, 1);
 }
 .post:hover .post-fade-cntnr {
 	display: block;
@@ -225,17 +221,29 @@ a:visited {
 	font-family: 'Open Sans', sans-serif;
 	line-height: 1.5em;
 }
+.content-entry{
+}
+.content-entry a:hover{
+	text-decoration: underline;
+}
 .content img{
 	margin-left: -20px;
 }
-/*Default Content END*/
-
-/*Quote Content*/
-.content-quote blockquote {
-	margin-right: 0;
-	margin-left: 0;
-	margin-top: 0;
-	margin-bottom: 0;
+.content .alignleft{
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+.content .alignright{
+	width: 300px;
+	float: right;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.content blockquote {
+	margin: 0;
+	margin-left: -20px;
 	font-family: Georgia, serif;
 	font-size: 18px;
 	font-style: italic;
@@ -248,7 +256,7 @@ a:visited {
 	position: relative;
 	color: #fff;
 }
-.content-quote blockquote:before {
+.content blockquote:before {
 	display: block;
 	content: "\201C";
 	font-size: 80px;
@@ -257,24 +265,38 @@ a:visited {
 	top: -10px;
 }
 
-.content-quote blockquote cite {
+.content blockquote cite {
 	color: #383838;
 	font-size: 14px;
 	display: block;
 	margin-top: 10px;
 }
  
-.content-quote blockquote cite:before {
+.content blockquote cite:before {
 	content: "\2014 \2009";
 }
+/*Default Content END*/
+
+/*Quote Content*/
 .post-quote-footer-cntnr {
-	height: 20spx;
 	bottom: 0;
+	right: 0;
+	left:0;
 	top: initial;
-	text-align: center;
 	color: white;
 	padding-left: 4px;
 	padding-right: 8px;
+}
+.quote-author-cntnr{
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.quote-dinfo-cntnr{
+	display: inline-block;
+	float: right;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 /*Quote Content END*/
 
@@ -290,17 +312,35 @@ a:visited {
 .content-image{
 	position: relative;
 }
-.post-image-title-cntnr {	
+.post-image-title-cntnr {
 	text-align: center;
+	background: rgba(0, 0, 0, 0.75);
+	top:20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .post-image-footer-cntnr {
-	height: 20spx;
-	bottom: 0;
+	height: 20px;
+	bottom: 20px;
+	right: 0;
+	left:0;
 	top: initial;
-	text-align: center;
 	color: white;
 	padding-left: 4px;
 	padding-right: 8px;
+}
+.image-author-cntnr{
+	background: rgba(0, 0, 0, 0.75);
+	display: inline-block;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.image-dinfo-cntnr{
+	background: rgba(0, 0, 0, 0.75);
+	display: inline-block;
+	float: right;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 /*Image Content END*/
 
@@ -314,16 +354,20 @@ a:visited {
 	float: right;
 	z-index: 3;
 	height: 100%;
-	width: 280px;
+	width: 260px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: white;
 }
 .sidebar-title{
 	font-weight: bold;
 }
 .sidebar-widget{
-	padding: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 /*Sidebar END*/
 
@@ -364,15 +408,46 @@ a:visited {
 
 /*Widget realated*/
 .sidebar-widget #s{
-	width: 256px;
-	border: 1px solid black;
+	width: 178px;
+	border:none;
+	border-bottom: 2px solid;
 	background-color: white;
 	margin-top: 4px;
 }
 .sidebar-widget input[type=submit]{
-	margin-top: 4px;
-	border: 1px solid black;
+	color: black;
+	margin-left: -5px;
+	border:none;
+	border-bottom: 2px solid;
+	background: none;
+	width: 80px;
+	cursor: pointer;
 }
 .sidebar-widget label[for=s]{
 	display: none;
+}
+
+/*Stuff need to get sorted*/
+.post-thumb-cntnr img{
+	margin-left: 0;
+	display: block;
+}
+.post-thumb-cntnr{
+	position: relative;
+	max-height: 372px;
+	overflow: hidden;
+	margin-left: -20px;
+	margin-right: -20px;
+}
+.post-title-thumb{
+	position: absolute;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.75);
+	left: 20px;
+	line-height: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
 }

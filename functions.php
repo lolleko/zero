@@ -100,7 +100,10 @@ function zero_customize_css()
             .post h2{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .content-quote blockquote{
+            .content-entry a{
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            .content blockquote{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .tag a{
@@ -117,6 +120,12 @@ function zero_customize_css()
             .hmenu-item:focus{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
+            .sidebar-widget #s{
+                border-color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            .sidebar-widget input[type=submit]{
+                border-color: <?php echo get_theme_mod('main_color'); ?>;
+            }
          </style>
     <?php
 }
@@ -128,6 +137,7 @@ function zero_enqueue_scripts() {
         get_template_directory_uri() . '/js/animation.js',
         array('jquery','masonry')
     );
+    wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'));
     wp_enqueue_script('masonry');
 }
  
@@ -194,7 +204,9 @@ $backgroundArgs = array(
 );
 add_theme_support( 'custom-background', $backgroundArgs );
 
-add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote' ) );
+add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link' ) );
+
+add_theme_support( 'post-thumbnails', array( 'post' ) );
 
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
