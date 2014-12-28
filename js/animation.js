@@ -28,12 +28,5 @@ jQuery(document).ready(function($) {
 		headerInner.css('margin-left', $( document ).width()/2 - headerInner.width()/2);
 	});
 
-	
-
-	/*msnry.on( 'layoutComplete', function( msnryInstance, laidOutItems ) {
-  		msnry.layout();
-	});*/
-
-
 });
 

@@ -369,6 +369,9 @@ a:visited {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.sidebar-widget ul{
+	list-style: none;
+}
 /*Sidebar END*/
 
 /*Footer*/

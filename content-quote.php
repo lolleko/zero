@@ -1,10 +1,9 @@
 			<div class="post-default">
 			 	<div class="post">
 				 	<div class="content content-quote">
-				 		<div class="post-quote-title-cntnr post-fade-cntnr">
-				 			<h2 class="post-quote-title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				 		<div class="content-entry">
+				 			<?php the_content(); ?>
 				 		</div>
-				 		<?php the_content(); ?>
 				 		<div class="post-quote-footer-cntnr post-fade-cntnr">
 				 			<div class="quote-author-cntnr">
 								<div class="quote-ainfo-cntnr">
