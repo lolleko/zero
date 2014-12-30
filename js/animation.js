@@ -1,7 +1,7 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
 	var headerInner = $('#header-inner');
-	headerInner.css('margin-left', $( document ).width()/2 - headerInner.width()/2);
+	headerInner.css('margin-left', $(document).width() / 2 - headerInner.width() / 2);
 
 	var container = document.querySelector('#page-cntnr');
 

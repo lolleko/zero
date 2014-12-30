@@ -416,6 +416,7 @@ a:visited {
 	border-bottom: 2px solid;
 	background-color: white;
 	margin-top: 4px;
+    height: 24px;
 }
 .sidebar-widget input[type=submit]{
 	color: black;
@@ -425,6 +426,7 @@ a:visited {
 	background: none;
 	width: 80px;
 	cursor: pointer;
+    height: 27px;
 }
 .sidebar-widget label[for=s]{
 	display: none;
