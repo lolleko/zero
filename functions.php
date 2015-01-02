@@ -59,7 +59,7 @@ function zero_customize_css()
                     background-color: white;
                 }
                 .post-footer{
-                    color: black;
+                    color:  #777;
                 }
                 <?php
             } else {
