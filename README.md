@@ -7,7 +7,7 @@ A Wordpress Theme.
 
 PREVIEW
 ![Image of Theme]
-(https://dl-web.dropbox.com/get/Screenshots/Screenshot%202015-01-03%2017.56.08.png?_subject_uid=21314937&w=AAAOPBtvbA40sMTavzx19ElHfKWvmIRTMtHCyHEPPzxJDg)
+(thumbnail.png?raw=true)
 
 ### Roadmap ###
 *   Finish basic Wordpress functionality (comments, footer, etc.)
