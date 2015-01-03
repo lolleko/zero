@@ -11,19 +11,29 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 Text Domain: zero
 */
 @font-face {
+    font-family: 'Genericons';
+    src: url('font/genericons/Genericons.eot');
+    src: url('font/genericons/Genericons.eot?#iefix') format('embedded-opentype'),
+         url('font/genericons/Genericons.woff') format('woff'),
+         url('font/genericons/Genericons.ttf') format('truetype'),
+         url('font/genericons/Genericons.svg#Genericons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
 	font-family: BebasKai;  
 	src: local('BebasKai-Regular'), 
-		 url("fonts/BebasKai-Regular.otf") format('opentype');  
+		 url("font/BebasKai-Regular.otf") format('opentype');
 	font-weight: normal;  
 }
 
 @font-face {
 	font-family: FjordOne;  
 	src: local('FjordOne-Regular'), 
-		 url("fonts/FjordOne-Regular.ttf") format('truetype');  
+		 url("font/FjordOne-Regular.ttf") format('truetype');
 	font-weight: normal;  
 }
-
 @import url("http://fonts.googleapis.com/css?family=Open+Sans");
 
 /*Document*/
@@ -222,7 +232,7 @@ a:visited {
 	margin-left: 20px;
 	margin-right: 20px;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 1.5em;
+	line-height: 140%;
 }
 .content-entry{
 }
@@ -248,7 +258,7 @@ a:visited {
 	margin: 0;
 	margin-left: -20px;
 	font-family: Georgia, serif;
-	font-size: 18px;
+	font-size: 1.5em;
 	font-style: italic;
 	width: 690px;
 	line-height: 1.45;
@@ -270,7 +280,9 @@ a:visited {
 
 .content blockquote cite {
 	color: #383838;
-	font-size: 14px;
+	font-size: 0.75em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
 	display: block;
 	margin-top: 10px;
 }
@@ -302,6 +314,49 @@ a:visited {
 	padding-right: 2px;
 }
 /*Quote Content END*/
+
+/*Link Content START*/
+.content-link{
+    margin: 0;
+    width: 690px;
+}
+.content-link a{
+    width: 100%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 20px;
+    font-size: 1.5em;
+    color: white !important;
+    background-color: #278952;
+    line-height: 1.5em;
+}
+.content-link a:before{
+    font-family: Genericons;
+    content: '\f107';
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    vertical-align: center;
+}
+.content-link a[href*="twitter.com"]:before{
+    content: '\f202' !important;
+}
+.content-link a[href*="facebook.com"]:before{
+    content: '\f204' !important;
+}
+.content-link p:first-child{
+    margin: 0;
+}
+.content-link a:hover{
+    text-decoration: none;
+}
+
+/*Link Content END*/
+
 
 /*Iframe Content*/
 .post iframe {
@@ -373,8 +428,9 @@ a:visited {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-.sidebar-widget ul{
+.sidebar-widget ul,li{
 	list-style: none;
+    padding-left:0;
 }
 /*Sidebar END*/
 
@@ -435,7 +491,6 @@ a:visited {
 .sidebar-widget label[for=s]{
 	display: none;
 }
-
 /*Stuff need to get sorted*/
 .post-thumb-cntnr img{
 	margin-left: 0;
