@@ -161,6 +161,8 @@ add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link' ) 
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 
+add_filter( 'use_default_gallery_style', '__return_false' );
+
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
