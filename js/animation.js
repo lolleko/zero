@@ -8,10 +8,10 @@ jQuery(document).ready(function ($) {
 
 	imagesLoaded( container, function() {
 		var msnry = new Masonry( container, {
-  			itemSelector: '.post-default'
+  			itemSelector: '.post'
 		});
 
-		$(".post-default").fadeIn();
+		$(".post").fadeIn();
 	});
 
 	$(window).scroll(function(){

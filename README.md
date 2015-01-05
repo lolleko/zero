@@ -5,7 +5,6 @@ wp-zero
 
 A Wordpress Theme.
 
-PREVIEW
 ![Image of Theme]
 (thumbnail.png?raw=true)
 

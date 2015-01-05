@@ -1,19 +1,13 @@
-			<div class="post-default">
-			 	<div class="post">
-				 	<div class="content content-quote">
-				 		<div class="content-entry">
+			<article class="post format-quote">
+			 	       <div class="entry-content">
 				 			<?php the_content(); ?>
 				 		</div>
-				 		<div class="post-quote-footer-cntnr post-fade-cntnr">
-				 			<div class="quote-author-cntnr">
-								<div class="quote-ainfo-cntnr">
-									<?php the_author_posts_link(); ?>
-								</div>
+				 		<div class="entry-footer-quote entry-footer-fade">
+				 			<div class="entry-author-quote">
+								<?php the_author_posts_link(); ?>
 							</div>
-							<div class="quote-dinfo-cntnr">
+							<div class="entry-date-quote">
 								<?php echo get_the_date(); ?>
 							</div>
 				 		</div>
-				 	</div>
-			 	</div>
-			</div>
+			</article>
