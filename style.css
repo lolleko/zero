@@ -201,6 +201,12 @@ a:visited {
     line-height: 140%;
     font-size: 16px;
 }
+.format-link .entry-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 140%;
+    font-size: 16px;
+}
 .entry-content .alignleft{
 	width: 300px;
 	float: left;
@@ -220,10 +226,9 @@ a:visited {
 	font-style: italic;
 	width: auto;
 	line-height: 1.45;
-	padding-top: 40px;
-	padding-bottom: 20px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 	position: relative;
 	color: #fff;
 }
@@ -232,8 +237,8 @@ a:visited {
 	content: "\201C";
 	font-size: 80px;
 	position: absolute;
-	left: 10px;
-	top: -10px;
+	left: 0;
+	top: 0;
 }
 
 .entry-content blockquote cite {
@@ -307,6 +312,12 @@ a:visited {
 /*Animation END*/
 
 /*Quote Content*/
+.format-quote .entry-content{
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
 .entry-footer-quote {
 	bottom: 0;
 	right: 0;
@@ -330,7 +341,11 @@ a:visited {
 /*Quote Content END*/
 
 /*Link Content START*/
-.format-link a{
+.entry-title-link{
+    font-weight: normal !important;
+    font-size: inherit !important;
+}
+.entry-title-link a{
     width: auto;
     height: 100%;
     display: block;
@@ -342,7 +357,7 @@ a:visited {
     color: white !important;
     line-height: 1.5em;
 }
-.format-link a:before{
+.entry-title-link a:before{
     font-family: Genericons;
     content: '\f107';
     color: white;
@@ -352,16 +367,13 @@ a:visited {
     left: 10px;
     vertical-align: center;
 }
-.format-link a[href*="twitter.com"]:before{
+.entry-title-link a[href*="twitter.com"]:before{
     content: '\f202' !important;
 }
-.format-link a[href*="facebook.com"]:before{
+.entry-title-link a[href*="facebook.com"]:before{
     content: '\f204' !important;
 }
-.format-link p:first-child{
-    margin: 0;
-}
-.format-link a:hover{
+.entry-title-link a:hover{
     text-decoration: none;
 }
 

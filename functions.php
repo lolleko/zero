@@ -76,9 +76,9 @@ function zero_customize_css()
             .sidebar-widget input[type=submit]{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .format-link a{
+            .format-quote, .format-link{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
-            }
+             }
          </style>
     <?php
 }
