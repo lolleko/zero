@@ -70,15 +70,12 @@ function zero_customize_css()
             .hmenu-item:focus{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .sidebar-widget #s{
-                border-color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .sidebar-widget input[type=submit]{
+            #searchform div{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .format-quote, .format-link{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
-             }
+            }
          </style>
     <?php
 }

@@ -63,7 +63,7 @@ a:visited {
 
 /*Main Content*/
 #page-wrap{
-	margin-right: 300px;
+	margin-right: 290px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -78,7 +78,7 @@ a:visited {
 /*Header*/
 #header-cntnr{
 	position: fixed;
-	margin-top: -68px;
+	margin-top: -78px;
 	left: 0;
 	right: 0;
 	min-width: 1182px;
@@ -115,9 +115,9 @@ a:visited {
 	cursor: pointer;
 }
 #header-image-cntnr{
-	margin-top: 68px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-top: 78px;
+	margin-left: 30px;
+	margin-right: 30px;
 	height: 200px;
 	width: 770px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
@@ -141,7 +141,7 @@ a:visited {
 }
 .header-title-fixed{
 	font-size: 24px !important;
-	margin-top: -58px !important;
+	margin-top: -68px !important;
 	position: fixed !important;
 	top: initial !important;
 	left: 10px !important;
@@ -150,8 +150,8 @@ a:visited {
 
 /*Post*/
 .post{
-	margin-top: 20px;
-	margin-left: 20px;
+	margin-top: 30px;
+	margin-left: 30px;
 	float: left;
 	width: 770px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
@@ -167,8 +167,8 @@ a:visited {
 }
 /*Entry Header*/
 .entry-header{
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 .entry-title{
     font-weight: 800;
@@ -176,7 +176,7 @@ a:visited {
 }
 .entry-thumb{
 	position: relative;
-	max-height: 372px;
+    	max-height: 372px;
 	overflow: hidden;
 }
 .entry-header-thumb{
@@ -242,7 +242,7 @@ a:visited {
 }
 
 .entry-content blockquote cite {
-	color: #383838;
+	color: #000;
 	font-size: 0.75em;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -257,7 +257,6 @@ a:visited {
 /*Post Footer*/
 .entry-footer{
 	font-size: 16px;
-	width: 730px;
 	margin-left: 20px;
 	margin-right: 20px;
 	padding-top: 4px;
@@ -416,47 +415,76 @@ a:visited {
 
 /*Content gallery*/
 .gallery {
-    margin: 20px auto 20px;
-    width: 100%;
+    margin: 20px 20px 20px 20px;
 }
 .gallery dd{
     margin-left: 0;
 }
 .gallery .gallery-item {
 	float: left;
-	margin-top: 0;
 	text-align: center;
     max-width: 100%;
-}
-.gallery-columns-0 .gallery-item {
-    width: 100%;
+    margin:0px 4px 4px 0px;
 }
 .gallery-columns-1 .gallery-item {
-    width: 100%;
+	max-width: 100%;
 }
+
 .gallery-columns-2 .gallery-item {
-    width: 50%;
+	max-width: 48%;
+	max-width: -webkit-calc(50% - 4px);
+	max-width:         calc(50% - 4px);
 }
-.gallery-columns-2 .gallery-item {
-    width: 50%;
-}
+
 .gallery-columns-3 .gallery-item {
-    width: 33,33%;
-    width: calc(100% / 3);
+	max-width: 32%;
+	max-width: -webkit-calc(33.3% - 4px);
+	max-width:         calc(33.3% - 4px);
 }
+
 .gallery-columns-4 .gallery-item {
-    width: 25%;
+	max-width: 23%;
+	max-width: -webkit-calc(25% - 4px);
+	max-width:         calc(25% - 4px);
 }
+
 .gallery-columns-5 .gallery-item {
-    width: 20%;
+	max-width: 19%;
+	max-width: -webkit-calc(20% - 4px);
+	max-width:         calc(20% - 4px);
 }
+
+.gallery-columns-6 .gallery-item {
+	max-width: 15%;
+	max-width: -webkit-calc(16.7% - 4px);
+	max-width:         calc(16.7% - 4px);
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 13%;
+	max-width: -webkit-calc(14.28% - 4px);
+	max-width:         calc(14.28% - 4px);
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 11%;
+	max-width: -webkit-calc(12.5% - 4px);
+	max-width:         calc(12.5% - 4px);
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 9%;
+	max-width: -webkit-calc(11.1% - 4px);
+	max-width:         calc(11.1% - 4px);
+}
+
 .gallery img {
 
 }
 .gallery .gallery-caption {
-	color: #888;
 	font-size: 14px;
     font-weight: bold;
+    margin-top: 10px;
 }
 .gallery dl, .gallery dt { margin: 0; }
 .gallery br+br { display: none; }
@@ -472,8 +500,8 @@ a:visited {
 	float: right;
 	z-index: 3;
 	height: 100%;
-	width: 260px;
-	margin-top: 20px;
+	width: 250px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 	overflow: hidden;
 	padding-left: 20px;
@@ -530,10 +558,12 @@ a:visited {
 /*Footer END*/
 
 /*Widget realated*/
+#searchform div{
+    border-bottom: 2px solid;
+}
 .sidebar-widget #s{
-	width: 178px;
+	width: 168px;
 	border:none;
-	border-bottom: 2px solid;
 	background-color: white;
 	margin-top: 4px;
     height: 24px;
@@ -542,7 +572,6 @@ a:visited {
 	color: black;
 	margin-left: -5px;
 	border:none;
-	border-bottom: 2px solid;
 	background: none;
 	width: 80px;
 	cursor: pointer;
