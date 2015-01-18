@@ -3,7 +3,11 @@
                     <a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                 </div>
                 <div class="entry-content">
-                    <?php the_content(); ?>
+                    <?php
+                        echo '<img src="';
+                        echo first_image();
+                        echo '"></img>';
+                    ?>
                 </div>
                 <div class="entry-footer-image entry-footer-fade">
                     <div class="entry-author-image">

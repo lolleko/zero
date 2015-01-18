@@ -82,15 +82,15 @@ function zero_customize_css()
 add_action( 'wp_head', 'zero_customize_css');
 
 function zero_enqueue_scripts() {
+    wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'));
+    wp_enqueue_script('masonry');
     wp_enqueue_script(
         'animation',
         get_template_directory_uri() . '/js/animation.js',
         array('jquery','masonry')
     );
-    wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array('jquery'));
-    wp_enqueue_script('masonry');
 }
- 
+
 add_action( 'wp_enqueue_scripts', 'zero_enqueue_scripts' );
 
 function zero_widgets_init() {
@@ -154,7 +154,7 @@ $backgroundArgs = array(
 );
 add_theme_support( 'custom-background', $backgroundArgs );
 
-add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link' ) );
+add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link', 'video' ) );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 
@@ -165,3 +165,17 @@ function filter_ptags_on_images($content){
 }
 
 add_filter('the_content', 'filter_ptags_on_images');
+
+function first_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches[1][0];
+
+  if(empty($first_img)) {
+    $first_img = "/path/to/default.png";
+  }
+  return $first_img;
+}

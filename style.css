@@ -40,7 +40,7 @@ Text Domain: zero
 body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
     margin:0;
-    min-width: 1200px;
+    min-width: 1120px;
     min-height: 1000px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
@@ -81,7 +81,7 @@ a:visited {
 	margin-top: -78px;
 	left: 0;
 	right: 0;
-	min-width: 1182px;
+	min-width: 1120px;
 	height: 48px;
 	z-index: 1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
@@ -129,8 +129,8 @@ a:visited {
 .header-title-cntnr{
 	position: absolute;
 	font-size: 56px;
-	margin-top: 20px;
-	left: 40px;
+	margin-top: 30px;
+	left: 60px;
 	max-width: 400px;
 	z-index: 2;
 }
@@ -167,8 +167,8 @@ a:visited {
 }
 /*Entry Header*/
 .entry-header{
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: 40px;
+    margin-left: 40px;
 }
 .entry-title{
     font-weight: 800;
@@ -183,8 +183,8 @@ a:visited {
 	position: absolute;
 	text-align: center;
 	background: rgba(0, 0, 0, 0.8);
-    top: 20px;
-	left: 20px;
+    top: 30px;
+	left: 30px;
 	line-height: 24px;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -207,17 +207,31 @@ a:visited {
     line-height: 140%;
     font-size: 16px;
 }
+.format-gallery .entry-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 140%;
+    font-size: 16px;
+}
+.format-video .entry-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 140%;
+    font-size: 16px;
+}
 .entry-content .alignleft{
 	width: 300px;
 	float: left;
 	margin-right: 20px;
 	margin-top: 20px;
+    margin-bottom: 20px;
 }
 .entry-content .alignright{
 	width: 300px;
 	float: right;
 	margin-left: 20px;
 	margin-top: 20px;
+    margin-bottom: 20px;
 }
 .entry-content blockquote {
 	margin: 0;
@@ -257,6 +271,7 @@ a:visited {
 /*Post Footer*/
 .entry-footer{
 	font-size: 16px;
+    margin-top: 40px;
 	margin-left: 20px;
 	margin-right: 20px;
 	padding-top: 4px;
@@ -381,18 +396,21 @@ a:visited {
 
 /*Iframe Content*/
 .post iframe {
-	margin-left: -20px;
+    width: webkit-calc(100% + 80px);
+    width:        calc(100% + 80px);
 	width: 770px;
 	height: 433px;
+    margin-left: -40px;
+    margin-right: -40px;
 }
 /*Iframe Content END*/
 
 /*Image Content*/
 .entry-footer-image {
 	height: 20px;
-	bottom: 20px;
-	right: 20px;
-	left:20px;
+	bottom: 30px;
+	right: 30px;
+	left: 30px;
 	top: initial;
 	color: white;
 	padding-left: 4px;
@@ -415,7 +433,7 @@ a:visited {
 
 /*Content gallery*/
 .gallery {
-    margin: 20px 20px 20px 20px;
+    margin: 20px auto 20px;
 }
 .gallery dd{
     margin-left: 0;
