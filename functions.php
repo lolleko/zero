@@ -67,7 +67,8 @@ function zero_customize_css()
             }
             .menu-item:hover,
             .menu-item:active,
-            .hmenu-item:focus{
+            .menu-item:focus,
+            .current-menu-item{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
             #searchform div{
