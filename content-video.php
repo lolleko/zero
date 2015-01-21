@@ -1,6 +1,6 @@
 			<article class="post format-video">
                 <?php if ( !has_post_thumbnail() ):?>
-                    <div class="entry-header entry-header-gallery">
+                    <div class="entry-header entry-header-video">
                         <a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                     </div>
                 <?php else: ?>

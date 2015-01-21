@@ -167,16 +167,21 @@ function filter_ptags_on_images($content){
 
 add_filter('the_content', 'filter_ptags_on_images');
 
-function first_image() {
-  global $post, $posts;
-  $first_img = '';
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches[1][0];
+function first_image($type = 'anchor') {
+    global $post, $posts;
+    $url = '';
+    ob_start();
+    ob_end_clean();
+    if($type === 'image'){
+        $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+        $url = $matches[0][0];
+    } else{
+        $output = preg_match_all('/<a.+href=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+        $url = $matches[0][0];
+    }
 
-  if(empty($first_img)) {
-    $first_img = "/path/to/default.png";
-  }
-  return $first_img;
+    if(empty($url)) {
+        $url = "/path/to/default.png";
+    }
+    return $url;
 }

@@ -42,7 +42,7 @@ body,html{
     margin:0;
     min-width: 1120px;
     min-height: 1000px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -89,8 +89,8 @@ a:visited {
 
 #header-inner{
 	display: inline-block;
-	font-family: BebasKai;
-	font-size: 18px;
+    font-family: BebasKai;
+	font-size: 16px;
     width: 100%;
     height: 48px;
 }
@@ -108,13 +108,17 @@ a:visited {
 	list-style-type: none;
 }
 .menu-item{
-    height: 34px;
+    height: 48px;
 	min-width: 100px;
     margin: 0;
-	padding-top: 14px;
+	display: inline-block;
+}
+.menu-item a{
+    display: inline-block;
+    height: 32px;
+    padding-top: 16px;
 	padding-right: 8px;
 	padding-left: 8px;
-	display: inline-block;
 }
 .menu-item:hover{
 	cursor: pointer;
@@ -410,6 +414,23 @@ a:visited {
 	height: 433px;
     margin-left: -40px;
     margin-right: -40px;
+}
+.post .wp-video {
+    margin-top: 32px;
+    width: 770px !important;
+	height: 433px !important;
+}
+.post .mejs-container{
+    width: 770px !important;
+	height: 433px !important;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+.post .mejs-container-fullscreen{
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 /*Iframe Content END*/
 

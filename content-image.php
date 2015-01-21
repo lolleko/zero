@@ -4,9 +4,7 @@
                 </div>
                 <div class="entry-content">
                     <?php
-                        echo '<img src="';
                         echo first_image();
-                        echo '"></img>';
                     ?>
                 </div>
                 <div class="entry-footer-image entry-footer-fade">
