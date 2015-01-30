@@ -6,7 +6,7 @@ wp-zero
 A Wordpress Theme.
 
 ![Image of Theme]
-(thumbnail.png?raw=true)
+(screenshot.png?raw=true)
 
 ### Roadmap ###
 *   Finish basic Wordpress functionality (comments, footer, etc.)

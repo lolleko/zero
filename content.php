@@ -1,4 +1,4 @@
-			<article class="post format-default">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <?php if ( !has_post_thumbnail() ):?>
                     <div class="entry-header">
                         <a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>

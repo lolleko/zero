@@ -3,6 +3,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<?php wp_head(); ?>
+		<meta name="viewport" content="width=770;">
 	</head>
 	<body class="custom-background">
 		<div id ="header-cntnr">

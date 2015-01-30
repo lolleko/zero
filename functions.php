@@ -19,6 +19,11 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
+            <?php if ( !is_active_sidebar( 'primary_widget_area' ) ) : ?>
+            #page-wrap{
+                margin-right: 0px;
+            }
+            <?php endif; ?>
             #header-cntnr{
                 background-color: #222;
             }
@@ -38,43 +43,42 @@ function zero_customize_css()
             .entry-footer{
                 color:  #777;
             }
-            .more-link{
-                color: <?php echo get_theme_mod('main_color'); ?> !important;
-            }
             .header-title-inner
             {
                 color: #fff;
                 background-color: <?php echo '#' . get_header_textcolor(); ?>;
                 padding: 2px;
             }
-            .entry-title{
-                color: <?php echo get_theme_mod('main_color'); ?> !important;
-            }
-            .entry-content a{
-                color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .post blockquote{
-                background-color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .tag a{
-                background-color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .sidebar-title{
-                color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            #calendar_wrap a{
-                color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .menu-item:hover,
-            .menu-item:active,
-            .menu-item:focus,
-            .current-menu-item{
-                color: <?php echo get_theme_mod('main_color'); ?>;
-            }
             #searchform div{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .format-quote, .format-link{
+            /*font color */
+            .menu-item:hover,
+            .menu-item:active,
+            .menu-item:focus,
+            .current-menu-item,
+            .sidebar-title,
+            .entry-content a,
+            .more-link
+            {
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+
+            .entry-title{
+                color: <?php echo get_theme_mod('main_color'); ?>!important;
+            }
+
+            .entry-title-link a:hover{
+                color: <?php echo get_theme_mod('main_color'); ?>!important;
+            }
+
+            /*background color*/
+            .format-quote,
+            .format-link,
+            .tag a,
+            .post blockquote,
+            #wp-calendar tbody td a
+            {
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
             }
          </style>
@@ -158,6 +162,10 @@ add_theme_support( 'custom-background', $backgroundArgs );
 add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link', 'video' ) );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
+
+add_theme_support( 'infinite-scroll', array(
+    'container' => 'page-cntnr',
+) );
 
 add_filter( 'use_default_gallery_style', '__return_false' );
 
