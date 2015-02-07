@@ -19,19 +19,11 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
-            <?php if ( !is_active_sidebar( 'primary_widget_area' ) ) : ?>
-            #page-wrap{
-                margin-right: 0px;
-            }
-            <?php endif; ?>
             #header-cntnr{
-                background-color: #222;
+                background-color: rgba(34,34,34,0.97);
             }
             #header-inner{
                 color:white;
-            }
-            .sidebar-widget{
-                background-color: white;
             }
             #footer-cntnr{
                 color: white;
@@ -43,11 +35,10 @@ function zero_customize_css()
             .entry-footer{
                 color:  #777;
             }
-            .header-title-inner
+            #header-title-inner
             {
                 color: #fff;
                 background-color: <?php echo '#' . get_header_textcolor(); ?>;
-                padding: 2px;
             }
             #searchform div{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
@@ -76,7 +67,7 @@ function zero_customize_css()
             .format-quote,
             .format-link,
             .tag a,
-            .post blockquote,
+            .entry-content blockquote,
             #wp-calendar tbody td a
             {
                 background-color: <?php echo get_theme_mod('main_color'); ?>;

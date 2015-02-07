@@ -6,18 +6,19 @@
 		<meta name="viewport" content="width=770;">
 	</head>
 	<body class="custom-background">
-		<div id ="header-cntnr">
+		<header id ="header-cntnr">
+		    <div id="header-title-cntnr">
+                <span id="header-title-inner">
+                    <a class="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                        <?php bloginfo( 'name' ); ?>
+                    </a>
+                </span>
+                <span id="header-title-description"><?php bloginfo( 'description'); ?></span>
+            </div>
 			<div id="header-inner">
-				<?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
+				<button id="header-menu"></button>
 			</div>
-		</div>
-		<div class="header-title-cntnr">
-			<span class="header-title-inner">
-				<a class="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
-				</a>
-			</span>
-		</div>
+		</header>
 		<div id="header-image-cntnr">
         <?php if ( get_header_image() ):?>
 			<a class="header-image-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
