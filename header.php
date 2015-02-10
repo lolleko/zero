@@ -3,10 +3,10 @@
 	<head>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<?php wp_head(); ?>
-		<meta name="viewport" content="width=770;">
+		<meta name="viewport" content="width=770"></meta>
 	</head>
 	<body class="custom-background">
-		<header id ="header-cntnr">
+		<header id="header-cntnr">
 		    <div id="header-title-cntnr">
                 <span id="header-title-inner">
                     <a class="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

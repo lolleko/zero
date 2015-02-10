@@ -20,7 +20,7 @@ function zero_customize_css()
     ?>
          <style type="text/css">
             #header-cntnr{
-                background-color: rgba(34,34,34,0.97);
+                background-color: #222;
             }
             #header-inner{
                 color:white;
@@ -140,8 +140,8 @@ function modify_read_more_link() {
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 $headerArgs = array(
-    'width'         => 770,
-    'height'        => 200,
+    'width'         => 1440,
+    'height'        => 400,
 );
 add_theme_support( 'custom-header', $headerArgs );
 
@@ -153,6 +153,10 @@ add_theme_support( 'custom-background', $backgroundArgs );
 add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link', 'video' ) );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
+
+add_theme_support( 'html5', array(
+    'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+) );
 
 add_theme_support( 'infinite-scroll', array(
     'container' => 'page-cntnr',

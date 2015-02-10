@@ -18,7 +18,8 @@ if ( post_password_required() ) {
 				wp_list_comments( array(
 					'style'       => 'div',
 					'short_ping'  => true,
-					'avatar_size' => 56,
+					'avatar_size' => 96,
+                    'max_depth'   => 3
 				) );
 			?>
 		</div>
@@ -31,7 +32,7 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
 	<?php endif; ?>
 
-    <div id="comment-form-respond-container" class="post post-comment">
+    <div id="comment-form-respond-container" class="post">
 	    <?php comment_form(); ?>
 	</div>
 

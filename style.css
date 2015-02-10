@@ -74,6 +74,7 @@ a:visited {
     margin-left: auto;
     margin-right: auto;
     width: 770px;
+    overflow: visible !important;
 }
 @media (max-width: 800px) {
     #page-cntnr{
@@ -118,8 +119,9 @@ a:visited {
     width: 770px;
 }
 #header-image{	
-	max-width: 770px;
-	max-height: 200px;
+	width: 770px;
+    height: 200px;
+	height: auto;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 #header-title-cntnr{
@@ -137,7 +139,7 @@ a:visited {
 }
 #header-title-description{
     position: fixed;
-    top: 10px;
+    margin-top: 10px;
     margin-left: 10px;
     font-size: 14px;
     color: #fff;
@@ -145,7 +147,8 @@ a:visited {
 #header-menu{
     width: 40px;
     height: 40px;
-    float: right;
+    position: fixed;
+    right: 0;
     padding-top: 6px;
     background: none;
     border: none;
@@ -159,8 +162,12 @@ a:visited {
     font-size: 24px;
 }
 #header-menu:active{
-    background-color: white;
+    background-color: #fff;
     color: green;/*todo main color*/
+}
+.header-menu-active{
+    background-color: #fff !important;
+    color: green !important;/*todo main color*/
 }
 /*Header END*/
 
@@ -329,9 +336,6 @@ a:visited {
 	padding-left: 2px;
 	padding-right: 2px;
 }
-.avatar{
-	border-radius: 50%;
-}
 /*Post Footer END*/
 
 /*Animation stuff*/
@@ -365,6 +369,8 @@ a:visited {
 	left:0;
 	top: initial;
 	color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
 	padding-left: 4px;
 	padding-right: 8px;
 }
@@ -583,7 +589,7 @@ a:visited {
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    background-color: rgba(240,240,240, 0.95);
+    background: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     z-index: 100;
     display: none;
@@ -694,11 +700,28 @@ a:visited {
 
 /*Comments*/
 .post-comment{
-    padding: 40px;
-    width: 690px;
+    background: none !important;
+    box-shadow: none;
+}
+.comment.depth-1{
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 .comment{
-    margin-top: 40px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+.comments-title{
+    margin-top: 30px;
+    padding: 40px;
+    width: 690px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+#comment-form-respond-container{
+    padding: 40px;
+    width: 690px;
 }
 #comment-form-respond-container input{
     border: none;
@@ -728,5 +751,39 @@ a:visited {
 }
 .says{
     display: none;
+}
+.comment-author .fn{
+    display: inline-block;
+    margin-left: 6px;
+}
+.comment p{
+    margin-left: 58px;
+    margin-right: 58px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.comment-author{
+    display: inline-block;
+}
+.comment-author .avatar{
+    width: 48px;
+    height: 48px;
+}
+.comment-metadata{
+    display: inline-block;
+}
+.reply{
+    margin-left: 58px;
+}
+.comment-reply-link{
+    font-weight: bold;
+    color: green !important; /*todo main color*/
+}
+.depth-1{
+    padding: 15px;
+    padding-bottom: 30px;
+}
+.depth-2{
+    margin-left: 64px;
 }
 /*Stuff need to get sorted*/
