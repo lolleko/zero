@@ -50,27 +50,45 @@ function zero_customize_css()
             .current-menu-item,
             .sidebar-title,
             .entry-content a,
-            .more-link
+            .more-link,
+            .comment-reply-link
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
 
-            .entry-title{
-                color: <?php echo get_theme_mod('main_color'); ?>!important;
-            }
-
+            .entry-title,
+            .comment-reply-link,
             .entry-title-link a:hover{
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
 
+            .entry-header-quote .entry-title,
+            .entry-header-audio .entry-title
+            {
+                color: #fff !important;
+            }
+
+            .comment-form-author, .comment-form-email, .comment-form-url{
+                border-bottom: 2px <?php echo get_theme_mod('main_color'); ?> solid;
+            }
+
+            #comment-form-respond-container textarea{
+                border: 2px <?php echo get_theme_mod('main_color'); ?> solid;
+            }
             /*background color*/
             .format-quote,
+            .format-audio,
             .format-link,
             .tag a,
             .entry-content blockquote,
-            #wp-calendar tbody td a
+            #wp-calendar tbody td a,
+            #comment-form-respond-container input[type=submit]
             {
-                background-color: <?php echo get_theme_mod('main_color'); ?>;
+                background: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            /*bgcolor important*/
+            .wp-playlist-playing{
+                background: <?php echo get_theme_mod('main_color'); ?> !important;
             }
          </style>
     <?php
@@ -150,7 +168,7 @@ $backgroundArgs = array(
 );
 add_theme_support( 'custom-background', $backgroundArgs );
 
-add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link', 'video' ) );
+add_theme_support( 'post-formats', array( 'image', 'gallery', 'quote', 'link', 'video', 'aside', 'audio' ) );
 
 add_theme_support( 'post-thumbnails', array( 'post' ) );
 

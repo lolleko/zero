@@ -103,7 +103,6 @@ a:visited {
 	min-width: 770px;
 	height: 40px;
 	z-index: 1;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 
 #header-inner{
@@ -117,12 +116,14 @@ a:visited {
 	margin-right: auto;
 	height: 200px;
     width: 770px;
+    overflow: hidden;
+    cursor: pointer;
 }
 #header-image{	
 	width: 770px;
-    height: 200px;
+    height: 200px !important;
 	height: auto;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+
 }
 #header-title-cntnr{
     float: left;
@@ -134,7 +135,6 @@ a:visited {
 #header-title-inner{
 	font-family: BebasKai;
 	font-weight: bold;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     padding: 2px;
 }
 #header-title-description{
@@ -175,7 +175,6 @@ a:visited {
 .post{
 	margin-top: 30px;
     width: 770px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 .post p{
 	margin-top: 32px;
@@ -192,6 +191,7 @@ a:visited {
 .entry-header{
     margin-top: 40px;
     margin-left: 40px;
+    margin-right: 40px;
 }
 .entry-title{
     font-weight: 800;
@@ -199,7 +199,7 @@ a:visited {
 }
 .entry-thumb{
 	position: relative;
-    	max-height: 372px;
+    max-height: 372px;
 	overflow: hidden;
 }
 .entry-header-thumb{
@@ -239,6 +239,13 @@ a:visited {
 .format-video .entry-content{
     padding-left: 40px;
     padding-right: 40px;
+    line-height: 140%;
+    font-size: 16px;
+}
+.format-aside .entry-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
     line-height: 140%;
     font-size: 16px;
 }
@@ -351,19 +358,20 @@ a:visited {
 /*Quote Content*/
 .format-quote .entry-content{
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px;
+    padding-right: 10px;
     color: white;
 }
 .format-quote blockquote{
     padding-bottom: 0;
-    padding-left: 20px;
     margin: 0;
+    padding: 0;
 }
 .format-quote blockquote:before{
-    left:0;
+    left:0px;
+    content: "";
 }
-.entry-footer-quote {
+.entry-footer-white {
 	bottom: 0;
 	right: 0;
 	left:0;
@@ -374,16 +382,18 @@ a:visited {
 	padding-left: 4px;
 	padding-right: 8px;
 }
-.entry-author-quote{
+.entry-author-white{
 	display: inline-block;
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+    padding-bottom: 4px;
 }
-.entry-date-quote{
+.entry-date-white{
 	display: inline-block;
 	float: right;
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+    padding-bottom: 4px;
 }
 /*Quote Content END*/
 
@@ -590,7 +600,6 @@ a:visited {
     bottom: 0;
     overflow-y: auto;
     background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
     z-index: 100;
     display: none;
     text-align: center;
@@ -706,18 +715,15 @@ a:visited {
 .comment.depth-1{
     margin-top: 30px;
     background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 .comment{
     margin-top: 30px;
     font-size: 13px;
 }
 .comments-title{
-    margin-top: 30px;
     padding: 40px;
     width: 690px;
     background: #fff;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
 }
 #comment-form-respond-container{
     padding: 40px;
@@ -738,14 +744,9 @@ a:visited {
 #comment-form-respond-container textarea{
     width: 681px;
     max-width: 681px;
-    border: 2px green solid;/*todo main color*/
     margin-top: 10px;
 }
-.comment-form-author, .comment-form-email, .comment-form-url{
-    border-bottom: 2px green solid;/*todo main color*/
-}
 #comment-form-respond-container input[type=submit]{
-    background-color: green;/*todo main color*/
     color: white;
     padding: 4px;
 }
@@ -777,13 +778,63 @@ a:visited {
 }
 .comment-reply-link{
     font-weight: bold;
-    color: green !important; /*todo main color*/
 }
 .depth-1{
     padding: 15px;
     padding-bottom: 30px;
 }
 .depth-2{
-    margin-left: 64px;
+    margin-left: 56px;
 }
 /*Stuff need to get sorted*/
+/*ASIDE*/
+.entry-header-author-avatar{
+    width: 32px;
+    height: 32px;
+}
+.entry-header-aside{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.entry-date-aside{
+    float: right;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+/*AUDIO*/
+.wp-playlist{
+    border: none !important;
+    background-color: #222 !important;
+}
+.wp-playlist-caption, .wp-playlist-item-length{
+    color: #fff !important;
+    font-size: 14px !important;
+}
+.wp-playlist-item-length{
+    top: 4px !important;
+}
+.wp-playlist-item{
+    border: none !important;
+    padding: 4px !important;
+}
+.wp-playlist-current-item .wp-playlist-item-title{
+    font-size: 16px !important;
+}
+.wp-playlist-current-item .wp-playlist-item-artist{
+    font-size: 14px !important;
+}
+.wp-playlist-current-item .wp-playlist-item-album{
+    font-size: 14px !important;
+}
+.wp-playlist-current-item{
+    height: 75px !important;
+}
+.wp-playlist .wp-playlist-current-item img{
+    max-width: 75px !important;
+}
+.format-audio .entry-content{
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 140%;
+    font-size: 16px;
+}

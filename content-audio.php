@@ -1,10 +1,10 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-               <div class="entry-header entry-header-quote">
+                <div class="entry-header entry-header-audio">
                     <a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                         <?php the_title(); ?>
                     </a>
                 </div>
-               <div class="entry-content">
+                <div class="entry-content">
                     <?php the_content(); ?>
                 </div>
                 <div class="entry-footer-white">

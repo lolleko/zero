@@ -9,7 +9,7 @@
 		<header id="header-cntnr">
 		    <div id="header-title-cntnr">
                 <span id="header-title-inner">
-                    <a class="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                    <a id="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                         <?php bloginfo( 'name' ); ?>
                     </a>
                 </span>
@@ -21,7 +21,7 @@
 		</header>
 		<div id="header-image-cntnr">
         <?php if ( get_header_image() ):?>
-			<a class="header-image-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<a id="header-image-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<img id="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 			</a>
         <?php endif; ?>
