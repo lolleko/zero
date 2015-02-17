@@ -32,15 +32,12 @@ function zero_customize_css()
             .post{
                 background-color: white;
             }
-            .entry-footer{
-                color:  #777;
-            }
             #header-title-inner
             {
                 color: #fff;
                 background-color: <?php echo '#' . get_header_textcolor(); ?>;
             }
-            #searchform div{
+            .search-form{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
             }
             /*font color */
@@ -51,14 +48,19 @@ function zero_customize_css()
             .sidebar-title,
             .entry-content a,
             .more-link,
-            .comment-reply-link
+            .comment-reply-link,
+            #header-menu:active
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
 
             .entry-title,
             .comment-reply-link,
-            .entry-title-link a:hover{
+            .entry-title-link a:hover,
+            .wp-playlist-playing .wp-playlist-caption,
+            .wp-playlist-playing .wp-playlist-item-length,
+            .header-menu-active
+            {
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
 
@@ -87,7 +89,7 @@ function zero_customize_css()
                 background: <?php echo get_theme_mod('main_color'); ?>;
             }
             /*bgcolor important*/
-            .wp-playlist-playing{
+            .wp-playlist{
                 background: <?php echo get_theme_mod('main_color'); ?> !important;
             }
          </style>
@@ -153,7 +155,7 @@ function zero_register_menu() {
 add_action( 'init', 'zero_register_menu' );
 
 function modify_read_more_link() {
-    return '<a class="more-link" href="' . get_permalink() . '"> ...</a>';
+    return '<a class="more-link" href="' . get_permalink() . '"></a>';
 }
 add_filter( 'the_content_more_link', 'modify_read_more_link' );
 

@@ -42,7 +42,6 @@ Text Domain: zero
 body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
     margin:0;
-    min-width: 770px;
     min-height: 1000px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 0;
@@ -73,10 +72,9 @@ a:visited {
 #page-cntnr{
     margin-left: auto;
     margin-right: auto;
-    width: 770px;
     overflow: visible !important;
 }
-@media (max-width: 800px) {
+@media (min-width: 770px) {
     #page-cntnr{
         width: 770px;
     }
@@ -97,21 +95,14 @@ a:visited {
 /*Header*/
 #header-cntnr{
 	position: fixed;
-	margin-top: -70px;
+	margin-top: -78px;
 	left: 0;
 	right: 0;
-	min-width: 770px;
-	height: 40px;
+	height: 48px;
 	z-index: 1;
 }
-
-#header-inner{
-    font-family: BebasKai;
-	font-size: 16px;
-    height: 40px;
-}
 #header-image-cntnr{
-	margin-top: 70px;
+	margin-top: 78px;
 	margin-left: auto;
 	margin-right: auto;
 	height: 200px;
@@ -127,26 +118,24 @@ a:visited {
 }
 #header-title-cntnr{
     float: left;
-    font-size: 24px;
+    font-size: 32px;
 	margin-left: 30px;
 	max-width: 700px;
 	z-index: 2;
 }
 #header-title-inner{
 	font-family: BebasKai;
-	font-weight: bold;
     padding: 2px;
 }
 #header-title-description{
-    position: fixed;
     margin-top: 10px;
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
 }
 #header-menu{
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     position: fixed;
     right: 0;
     padding-top: 6px;
@@ -159,15 +148,13 @@ a:visited {
 #header-menu:before{
     content: '\f419';
     font-family: Genericons;
-    font-size: 24px;
+    font-size: 32px;
 }
 #header-menu:active{
     background-color: #fff;
-    color: green;/*todo main color*/
 }
 .header-menu-active{
     background-color: #fff !important;
-    color: green !important;/*todo main color*/
 }
 /*Header END*/
 
@@ -175,6 +162,7 @@ a:visited {
 .post{
 	margin-top: 30px;
     width: 770px;
+    opacity: 0;
 }
 .post p{
 	margin-top: 32px;
@@ -218,36 +206,18 @@ a:visited {
 /*Entry Header End*/
 
 /*Entry content*/
-.format-standard .entry-content{
+.entry-content{
     padding-left: 40px;
     padding-right: 40px;
-    line-height: 140%;
-    font-size: 16px;
-}
-.format-link .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 140%;
-    font-size: 16px;
-}
-.format-gallery .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 140%;
-    font-size: 16px;
-}
-.format-video .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 140%;
-    font-size: 16px;
+    line-height: 1.6;
+    font-size: 15px;
 }
 .format-aside .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
     padding-bottom: 40px;
-    line-height: 140%;
-    font-size: 16px;
+}
+.format-image .entry-content{
+    padding-left: 0;
+    padding-right: 0;
 }
 .entry-content .alignleft{
 	width: 300px;
@@ -305,13 +275,14 @@ a:visited {
 .entry-footer{
 	font-size: 16px;
     margin-top: 40px;
-	margin-left: 20px;
-	margin-right: 20px;
 	padding-top: 4px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 4px;
     height: 24px;
 	font-family: BebasKai;
     border-top: solid 1px #e2e2e2;
+    color: #777;
 }
 .entry-author{
 	display: inline-block;
@@ -359,7 +330,7 @@ a:visited {
 .format-quote .entry-content{
     padding-bottom: 20px;
     padding-left: 40px;
-    padding-right: 10px;
+    padding-right: 40px;
     color: white;
 }
 .format-quote blockquote{
@@ -379,8 +350,8 @@ a:visited {
 	color: white;
     padding-top: 4px;
     padding-bottom: 4px;
-	padding-left: 4px;
-	padding-right: 8px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 .entry-author-white{
 	display: inline-block;
@@ -444,19 +415,22 @@ a:visited {
     margin: 0;
 }
 .format-video iframe:first-of-type {
-	width: 770px;
+    width: 100%;
+	width: calc(100% + 80px);
 	height: 433.125px;
     margin-left: -40px;
     margin-right: -40px;
     margin-bottom: 64px;
 }
 .format-video .wp-video {
-    width: 770px !important;
+    width: 100% !important;
+	width: calc(100% + 80px) !important;
 	height: 433.125px !important;
     margin-bottom: 96px;
 }
 .format-video .mejs-container{
-    width: 770px !important;
+    width: 100% !important;
+	width: calc(100% + 80px) !important;
 	height: 433.125px !important;
     margin-left: -40px;
     margin-right: -40px;
@@ -588,14 +562,29 @@ a:visited {
 
 .more-link{
 	font-weight: bolder;
-	font-size: 20px;
+	display: block;
+    text-align: center;
+}
+.more-link:before{
+    font-family: Genericons;
+    font-size: 36px;
+    content: '\f476';
+}
+.post-edit-link{
+    font-weight: bolder;
+	display: block;
+}
+.post-edit-link:before{
+    font-family: Genericons;
+    font-size: 36px;
+    content: '\f411';
 }
 
 /*Sidebar*/
 #sidebar-cntnr{
 	position: fixed;
-    width: 385px;
-    top: 40px;
+    width: 100%;
+    top: 48px;
     right: 0;
     bottom: 0;
     overflow-y: auto;
@@ -603,10 +592,9 @@ a:visited {
     z-index: 100;
     display: none;
     text-align: center;
-    padding: 20px;
 }
 #sidebar-inner{
-    width: 385px;
+    width: 570px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -615,10 +603,10 @@ a:visited {
 }
 .sidebar-widget{
     vertical-align: top;
-    width: 385px;
+    width: 100%;
     display: block;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 .sidebar-widget ul,li{
 	list-style: none;
@@ -662,26 +650,31 @@ a:visited {
 /*Footer END*/
 
 /*Widget realated*/
-#searchform div{
+.search-form{
     border-bottom: 2px solid;
 }
-.sidebar-widget #s{
+.search-form .search-field{
 	width: 70%;
+    height: 32px;
 	border:none;
+    outline: none;
+    -webkit-appearance: none;
 	background-color: rgba(240,240,240,0);
 	margin-top: 4px;
-    height: 24px;
+    font-size: 15px;
 }
-.sidebar-widget input[type=submit]{
+.search-form input[type=submit]{
 	color: black;
 	margin-left: -5px;
 	border:none;
 	background: none;
-	width: 28%;
+	width: 30%;
 	cursor: pointer;
-    height: 27px;
+    height: 32px;
+    font-size: 15px;
+    font-weight: bold;
 }
-.sidebar-widget label[for=s]{
+.search-form .screen-reader-text{
 	display: none;
 }
 
@@ -722,12 +715,13 @@ a:visited {
 }
 .comments-title{
     padding: 40px;
-    width: 690px;
     background: #fff;
 }
 #comment-form-respond-container{
-    padding: 40px;
     width: 690px;
+}
+#respond{
+    padding: 40px;
 }
 #comment-form-respond-container input{
     border: none;
@@ -742,13 +736,13 @@ a:visited {
     font-size: 1.2em;
 }
 #comment-form-respond-container textarea{
-    width: 681px;
-    max-width: 681px;
+    width: 100%;
     margin-top: 10px;
 }
 #comment-form-respond-container input[type=submit]{
     color: white;
     padding: 4px;
+    cursor: pointer;
 }
 .says{
     display: none;
@@ -804,7 +798,10 @@ a:visited {
 /*AUDIO*/
 .wp-playlist{
     border: none !important;
-    background-color: #222 !important;
+}
+.wp-playlist .mejs-container{
+    width: 100% !important;
+    overflow: hidden;
 }
 .wp-playlist-caption, .wp-playlist-item-length{
     color: #fff !important;
@@ -831,6 +828,9 @@ a:visited {
 }
 .wp-playlist .wp-playlist-current-item img{
     max-width: 75px !important;
+}
+.format-audio .mejs-container, .format-audio .mejs-controls{
+    background: none !important;
 }
 .format-audio .entry-content{
     padding-left: 40px;

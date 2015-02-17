@@ -13,7 +13,7 @@
                 <?php endif; ?>
                 <div class="entry-content">
                     <?php the_content(); ?>
-                    <?php edit_post_link( 'edit', '<span class="edit-link">', '</span>' ); ?>
+                    <?php edit_post_link(''); ?>
                 </div>
                 <div class="entry-footer">
                     <div class="entry-author">
