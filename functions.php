@@ -46,7 +46,10 @@ function zero_customize_css()
             .menu-item:focus,
             .current-menu-item,
             .sidebar-title,
-            .entry-content a,
+            .format-standard .entry-content a,
+            .format-gallery .entry-content a,
+            .format-aside .entry-content a,
+            .format-video .entry-content a,
             .more-link,
             .comment-reply-link,
             #header-menu:active
