@@ -3,6 +3,7 @@
                     <a class="entry-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
                         <?php the_title(); ?>
                     </a>
+                    <?php edit_post_link(''); ?>
                 </div>
                 <div class="entry-content">
                     <?php

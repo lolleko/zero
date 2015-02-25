@@ -6,6 +6,7 @@
                 </div>
                <div class="entry-content">
                     <?php the_content(); ?>
+                    <?php edit_post_link(''); ?>
                 </div>
                 <div class="entry-footer-white">
                     <div class="entry-author-white">

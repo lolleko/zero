@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
         $container.imagesLoaded(function(){
             $container.masonry({
                 itemSelector: '.post',
-                "gutter": 30
+                "gutter": 40
             });
 
             $(".post").fadeIn(0, function(){
