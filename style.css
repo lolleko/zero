@@ -234,18 +234,16 @@ a:visited {
     padding-right: 0;
 }
 .entry-content .alignleft{
-	width: 300px;
+	width: 40%;
 	float: left;
-	margin-right: 20px;
-	margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	margin-right: 10px;
 }
 .entry-content .alignright{
-	width: 300px;
+	width: 45%;
 	float: right;
-	margin-left: 20px;
-	margin-top: 20px;
-    margin-bottom: 20px;
+	margin-left: 10px;
 }
 .entry-content blockquote {
 	margin: 0;
@@ -301,7 +299,7 @@ a:visited {
 .entry-author{
 	display: inline-block;
 	float: left;
-	width: 33%;
+	width: 25%;
 	vertical-align: center;
 }
 .entry-date{
@@ -309,12 +307,12 @@ a:visited {
 	float: right;
 	text-align: right;
 	padding-right: 6px;
-	width: 33%;
+	width: 25%;
 }
 .entry-tags{
 	text-align: center;
 	display: inline-block;
-	width: 33%;
+    width: 46%;
 }
 .tag{
 	display: inline-block;
@@ -322,9 +320,10 @@ a:visited {
 	margin-top: 2px;
 }
 .tag a{
-	font-size: 16px;
+    font-size: 0.8em;
 	width: auto;
 	color: white;
+    margin-top: 2px;
 	padding-left: 2px;
 	padding-right: 2px;
 }

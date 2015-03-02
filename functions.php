@@ -29,7 +29,7 @@ function zero_customize_css()
                 color: white;
                 background-color: #222;
             }
-            .post{
+            .post, .type-page{
                 background-color: white;
             }
             #header-title-inner
