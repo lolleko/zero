@@ -166,7 +166,7 @@ a:visited {
 #header-title-cntnr{
     float: left;
     font-size: 32px;
-	margin-left: 30px;
+	margin-left: 6%;
 	max-width: 700px;
 	z-index: 2;
 }
@@ -451,15 +451,15 @@ a:visited {
     margin: 0;
 }
 .format-video iframe:first-of-type {
-    width: 113.8%;
-    margin-left: -6.9%;
+    width: 113.9%;
+    margin-left: -6.95%;
     height: 433.12px;
     margin-bottom: 64px;
 }
 .format-video .wp-video {
-    width: 113.8% !important;
-    max-width: 113.8% !important;
-    margin-left: -6.9%;
+    width: 113.9% !important;
+    max-width: 113.9% !important;
+    margin-left: -6.95%;
 	height: 433.125px !important;
     margin-bottom: 96px;
 }
