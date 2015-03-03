@@ -1,5 +1,5 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                    <div class="entry-header-aside">
+                    <div class="entry-header">
                         <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="entry-header-author-avatar">
                             <?php echo get_avatar( get_the_author_meta( 'email' ), '64' ); ?>
                         </a>

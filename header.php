@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//DE" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 	<head>
-		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 		<?php wp_head(); ?>
-		<meta name="viewport" content="width=700"></meta>
+		<meta name="viewport" content="width=device-width, maximum-scale=1">
 	</head>
 	<body class="custom-background">
 		<header id="header-cntnr">

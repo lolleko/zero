@@ -45,6 +45,7 @@ body,html{
 	/*background-image: url('img/wallpaper-2888354.jpg');*/
     margin:0;
     min-height: 1000px;
+    width: 100%;
     font-family: DroidSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 0;
     box-sizing: border-box;
@@ -77,15 +78,47 @@ a:visited {
     overflow: visible !important;
 }
 @media screen and (max-width: 770px) {
+    #header-title-description{
+        display: none;
+    }
+    .entry-tags{
+        display: none !important;
+    }
+    .entry-author{
+        width: 50% !important;
+    }
+    .entry-date{
+        width: 50% !important;
+    }
+    #header-cntnr{
+        margin-top: -40px !important;
+    }
+    #header-image-cntnr{
+        margin-top: 40px !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+    #page-wrap{
+        margin-bottom: 0 !important;
+    }
+    #page-cntnr{
+        width: 100%;
+    }
     .post{
         font-size: 15px !important;
         line-height: 16px !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+    .depth-1{
+        margin-top: 0 !important;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 385px) {
     .post{
-        font-size: 14px !important;
-        line-height: 15px !important;
+        font-size: 13px !important;
+        line-height: 14px !important;
     }
 }
 @media screen and (min-width: 770px) {
@@ -125,7 +158,7 @@ a:visited {
     cursor: pointer;
 }
 #header-image{	
-	width: 770px;
+	width: 100%;
     height: 200px !important;
 	height: auto;
 
@@ -150,8 +183,7 @@ a:visited {
 #header-menu{
     width: 48px;
     height: 48px;
-    position: fixed;
-    right: 0;
+    float: right;
     padding-top: 6px;
     background: none;
     border: none;
@@ -191,9 +223,7 @@ a:visited {
 }
 /*Entry Header*/
 .entry-header{
-    margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin: 6% 0 0 6%;
 }
 .entry-title{
     font-weight: 800;
@@ -209,8 +239,8 @@ a:visited {
 	text-align: center;
 	background: rgba(0, 0, 0, 0.8);
     top: 30px;
-	left: 30px;
-	line-height: 24px;
+	left: 6%;
+	line-height: 1em;
 	color: white;
 }
 .entry-header-thumb a{
@@ -221,9 +251,8 @@ a:visited {
 
 /*Entry content*/
 .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 1.6em;
+    padding: 0 6% 0 6%;
+    line-height: 1.5em;
     font-size: 1em;
 }
 .format-aside .entry-content{
@@ -248,7 +277,7 @@ a:visited {
 .entry-content blockquote {
 	margin: 0;
 	font-family: Georgia, serif;
-	font-size: 1.5em;
+	font-size: 1.35em;
 	font-style: italic;
 	width: auto;
 	line-height: 1.45;
@@ -285,12 +314,9 @@ a:visited {
 /*Entry content end*/
 /*Post Footer*/
 .entry-footer{
-	font-size: 1.2em;
+	font-size: 0.975em;
     margin-top: 40px;
-	padding-top: 4px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 4px;
+	padding: 4px 6% 4px 6%;
     height: 24px;
 	font-family: BebasKai;
     border-top: solid 1px #e2e2e2;
@@ -299,25 +325,33 @@ a:visited {
 .entry-author{
 	display: inline-block;
 	float: left;
-	width: 25%;
 	vertical-align: center;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .entry-date{
 	display: inline-block;
 	float: right;
 	text-align: right;
-	padding-right: 6px;
-	width: 25%;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .entry-tags{
+    position: relative;
+    top: 0;
 	text-align: center;
 	display: inline-block;
-    width: 46%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .tag{
 	display: inline-block;
 	margin-left: 2px;
-	margin-top: 2px;
 }
 .tag a{
     font-size: 0.8em;
@@ -342,8 +376,7 @@ a:visited {
 /*Quote Content*/
 .format-quote .entry-content{
     padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 6% 0 6%;
     color: white;
 }
 .format-quote blockquote{
@@ -356,27 +389,16 @@ a:visited {
     content: "";
 }
 .entry-footer-white {
-	bottom: 0;
-	right: 0;
-	left:0;
-	top: initial;
 	color: white;
-    padding-top: 4px;
-    padding-bottom: 4px;
-	padding-left: 40px;
-	padding-right: 40px;
+    border: none;
 }
 .entry-author-white{
 	display: inline-block;
-	padding-left: 4px;
-	padding-right: 4px;
     padding-bottom: 4px;
 }
 .entry-date-white{
 	display: inline-block;
 	float: right;
-	padding-left: 4px;
-	padding-right: 4px;
     padding-bottom: 4px;
 }
 /*Quote Content END*/
@@ -394,9 +416,10 @@ a:visited {
     padding-bottom: 10px;
     padding-left: 65px;
     padding-right: 20px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: white;
     line-height: 1.5em;
+    word-wrap: break-word
 }
 .entry-title-link a:hover{
     background-color: #fff;
@@ -428,25 +451,21 @@ a:visited {
     margin: 0;
 }
 .format-video iframe:first-of-type {
-    width: 100%;
-	width: calc(100% + 80px);
-    height: 433.125px;
-    margin-left: -40px;
-    margin-right: -40px;
+    width: 113.8%;
+    margin-left: -6.9%;
+    height: 433.12px;
     margin-bottom: 64px;
 }
 .format-video .wp-video {
-    width: 100% !important;
-	width: calc(100% + 80px) !important;
+    width: 113.8% !important;
+    max-width: 113.8% !important;
+    margin-left: -6.9%;
 	height: 433.125px !important;
     margin-bottom: 96px;
 }
 .format-video .mejs-container{
     width: 100% !important;
-	width: calc(100% + 80px) !important;
 	height: 433.125px !important;
-    margin-left: -40px;
-    margin-right: -40px;
 }
 .format-video .mejs-container-fullscreen{
     width: 100% !important;
@@ -464,9 +483,9 @@ a:visited {
 /*Image Content*/
 .entry-footer-image {
 	height: 20px;
-	bottom: 30px;
-	right: 30px;
-	left: 30px;
+	bottom: 6%;
+	right: 6%;
+	left: 6%;
 	top: initial;
 	color: white;
 	padding-left: 4px;
@@ -738,14 +757,11 @@ a:visited {
     font-size: 13px;
 }
 .comments-title{
-    padding: 40px;
+    padding: 5%;
     background: #fff;
 }
-#comment-form-respond-container{
-    width: 690px;
-}
 #respond{
-    padding: 40px;
+    padding: 5%;
 }
 #comment-form-respond-container input{
     border: none;
@@ -811,10 +827,6 @@ a:visited {
     width: 32px;
     height: 32px;
 }
-.entry-header-aside{
-    margin-left: 40px;
-    margin-top: 40px;
-}
 .entry-date-aside{
     float: right;
     padding-right: 40px;
@@ -856,10 +868,4 @@ a:visited {
 }
 .format-audio .mejs-container, .format-audio .mejs-controls{
     background: none !important;
-}
-.format-audio .entry-content{
-    padding-left: 40px;
-    padding-right: 40px;
-    line-height: 140%;
-    font-size: 16px;
 }

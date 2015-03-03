@@ -8,7 +8,7 @@
                     <?php the_content(); ?>
                     <?php edit_post_link(''); ?>
                 </div>
-                <div class="entry-footer-white">
+                <div class="entry-footer entry-footer-white">
                     <div class="entry-author-white">
                         <?php the_author_posts_link(); ?>
                     </div>
