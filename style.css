@@ -229,9 +229,12 @@ a:visited {
     margin-left: 0;
 }
 .entry-content .alignright{
-	width: 45%;
+	width: 40% !important;
 	float: right;
 	margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0;
 }
 .entry-content blockquote {
 	margin: 0;
@@ -270,6 +273,9 @@ a:visited {
 
 .entry-content blockquote cite:before {
 	content: "\2014 \2009";
+}
+.entry-content figcaption{
+    font-size: 0.7em;
 }
 /*Entry content end*/
 /*Post Footer*/
