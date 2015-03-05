@@ -924,6 +924,9 @@ a:visited {
     .depth-1{
         margin-top: 0;
     }
+    #sidebar-inner{
+        width: 70%;
+    }
 }
 @media screen and (min-width: 770px) {
     #page-cntnr{
