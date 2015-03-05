@@ -27,18 +27,33 @@ Text Domain: zero
 		 url("font/BebasKai-Regular.otf") format('opentype');
 	font-weight: normal;  
 }
-
 @font-face {
-	font-family: DroidSans;
-	src: local('Droid Sans'),
-		 url("font/DroidSans.ttf") format('truetype');
-	font-weight: normal;  
+	font-family: Roboto;
+	src: local('Roboto'),
+		 url("font/Roboto/Roboto-Regular.ttf") format('truetype');
+	font-weight: 400;
+    font-style: normal;
 }
 @font-face {
-	font-family: DroidSans;
-	src: local('Droid Sans Bold'),
-		 url("font/DroidSans-Bold.ttf") format('truetype');
-	font-weight: bold;
+	font-family: Roboto;
+	src: local('Roboto Italic'),
+		 url("font/Roboto/Roboto-Italic.ttf") format('truetype');
+	font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+	font-family: Roboto;
+	src: local('Roboto Bold'),
+		 url("font/Roboto/Roboto-Bold.ttf") format('truetype');
+	font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: local('Roboto Bold Italic'),
+		 url("font/Roboto/Roboto-BoldItalic.ttf") format('truetype');
+	font-weight: 700;
+    font-style: italic;
 }
 /*Document*/
 body,html{
@@ -46,7 +61,7 @@ body,html{
     margin:0;
     min-height: 1000px;
     width: 100%;
-    font-family: DroidSans, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -164,9 +179,10 @@ a:visited {
     margin: 5% 0 0 5%;
 }
 .format-standard .entry-header,
-.format-standard .entry-header-quote,
-.format-standard .entry-header-audio{
-    margin: 7% 0 0 5%;
+.entry-header-quote,
+.entry-header-audio
+.entry-header-gallery{
+    margin: 6% 0 0 5%;
 }
 .entry-title{
     font-weight: 800;
@@ -297,7 +313,7 @@ a:visited {
 	margin-left: 2px;
 }
 .tag a{
-    font-size: 0.8em;
+    font-size: 0.9em;
 	width: auto;
 	color: white;
     margin-top: 2px;
@@ -394,15 +410,15 @@ a:visited {
     margin: 0;
 }
 .format-video iframe:first-of-type {
-    width: 111.2%;
-    margin-left: -5.6%;
+    width: 111.1%;
+    margin-left: -5.55%;
     height: 433.12px;
     margin-bottom: 64px;
 }
 .format-video .wp-video {
-    width: 111.2% !important;
-    max-width: 111.2% !important;
-    margin-left: -5.6%;
+    width: 111.1% !important;
+    max-width: 111.1% !important;
+    margin-left: -5.55%;
 	height: 433.125px !important;
     margin-bottom: 96px;
 }
@@ -773,7 +789,7 @@ a:visited {
 .entry-date-aside{
     position:absolute;
     right: 5%;
-    top:5%;
+    top: 8%;
 }
 /*AUDIO*/
 .wp-playlist{
@@ -872,6 +888,9 @@ a:visited {
     #header-title-description{
         display: none;
     }
+    .entry-footer{
+        border-bottom: solid 1px #e2e2e2;
+    }
     .entry-tags{
         display: none;
     }
@@ -882,10 +901,10 @@ a:visited {
         width: 50%;
     }
     #header-cntnr{
-        margin-top: -40px;
+        margin-top: -48px;
     }
     #header-image-cntnr{
-        margin-top: 40px;
+        margin-top: 48px;
         margin-bottom: -4px;
         width: 100%;
         margin-right: 0;
@@ -898,8 +917,7 @@ a:visited {
         width: 100%;
     }
     .post{
-        font-size: 15px;
-        line-height: 16px;
+        font-size: 16px;
         width: 100%;
         margin-top: 0;
     }
@@ -907,17 +925,14 @@ a:visited {
         margin-top: 0;
     }
 }
-@media screen and (max-width: 385px) {
-    .post{
-        font-size: 14px;
-        line-height: 15px;
-    }
-}
 @media screen and (min-width: 770px) {
     #page-cntnr{
         width: 770px;
     }
     #header-image-cntnr{
+        width: 770px;
+    }
+    #header-image{
         width: 770px;
     }
 }

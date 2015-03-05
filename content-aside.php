@@ -8,8 +8,8 @@
                             <?php echo get_the_date(); ?>
                         </div>
                     </div>
-                        <div class="entry-content">
-				            <?php the_content(); ?>
-                            <?php edit_post_link(''); ?>
-                        </div>
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                        <?php edit_post_link(''); ?>
+                    </div>
 			</article>
