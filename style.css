@@ -82,7 +82,7 @@ a:visited {
 
 /*Main Content*/
 #page-wrap{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
@@ -200,7 +200,6 @@ a:visited {
     top: 30px;
 	left: 5%;
 	line-height: 1em;
-	color: white;
 }
 .entry-header-thumb a{
     display: block;
@@ -222,11 +221,12 @@ a:visited {
     padding-right: 0;
 }
 .entry-content .alignleft{
-	width: 40%;
+	width: 40% !important;
 	float: left;
     margin-top: 10px;
     margin-bottom: 10px;
 	margin-right: 10px;
+    margin-left: 0;
 }
 .entry-content .alignright{
 	width: 45%;
@@ -253,7 +253,7 @@ a:visited {
 	display: block;
     font-family: Genericons;
 	content: '\f106';
-	font-size: 80px;
+	font-size: 50px;
 	position: absolute;
 	left: 20px;
 	top: 0;
@@ -458,7 +458,7 @@ a:visited {
 .entry-title-link a[href*="spotify.com"]:before{
     content: '\f515' !important;
 }
-.entry-title-link a[href*="twitch.com"]:before{
+.entry-title-link a[href*="twitch.tv"]:before{
     content: '\f516' !important;
 }
 .entry-title-link a:hover{
@@ -771,11 +771,11 @@ a:visited {
     box-shadow: none;
 }
 .comment.depth-1{
-    margin-top: 30px;
+    margin-top: 40px;
     background: #fff;
 }
 .comment{
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 13px;
 }
 .comments-title{
