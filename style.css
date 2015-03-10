@@ -860,7 +860,6 @@ a:visited {
     overflow: hidden;
 }
 .wp-playlist-caption, .wp-playlist-item-length{
-    color: #fff !important;
     font-size: 14px !important;
 }
 .wp-playlist-item-length{
