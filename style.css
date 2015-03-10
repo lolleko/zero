@@ -343,7 +343,6 @@ a:visited {
 .format-quote .entry-content{
     padding-bottom: 20px;
     padding: 0 5% 0 5%;
-    color: white;
 }
 .format-quote blockquote{
     padding-bottom: 0;
@@ -355,7 +354,6 @@ a:visited {
     content: "";
 }
 .entry-footer-white {
-	color: white;
     border: none;
 }
 .entry-author-white{
@@ -383,11 +381,7 @@ a:visited {
     padding-left: 60px;
     padding-right: 20px;
     font-size: 1.3em;
-    color: white;
     line-height: 1.5em;
-}
-.entry-title-link a:hover{
-    background-color: #fff;
 }
 .entry-title-link a:before{
     font-family: Genericons;
@@ -632,9 +626,6 @@ a:visited {
 .post-edit-link{
     font-weight: bolder;
 	display: inline-block;
-}
-.format-quote .post-edit-link, .format-audio .post-edit-link, .format-link .post-edit-link{
-    color: #fff !important;
 }
 .format-link .post-edit-link{
     padding-left: 20px;

@@ -41,6 +41,47 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
+            <?php if ( get_theme_mod('post_format_color') == 'white' ) : ?>
+            .entry-title-link{
+                background-color: #fff;
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            .entry-title-link a:hover{
+                background-color: <?php echo get_theme_mod('main_color'); ?>;
+                color: #fff;
+            }
+            .format-quote .post-edit-link, .format-audio .post-edit-link, .format-link .post-edit-link{
+                color: <?php echo get_theme_mod('main_color'); ?> !important;
+            }
+            .entry-footer-white,
+            .format-quote .entry-content{
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            <?php else : ?>
+            .entry-title-link a:hover{
+                background-color: #fff;
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            .entry-title-link{
+                background-color: <?php echo get_theme_mod('main_color'); ?>;
+                color: #fff;
+            }
+            .entry-header-quote .entry-title,
+            .entry-header-audio .entry-title,
+            .format-quote .post-edit-link, .format-audio .post-edit-link, .format-link .post-edit-link{
+                color: #fff !important;
+            }
+            .entry-footer-white,
+            .format-quote .entry-content{
+                color: #fff;
+            }
+            .format-quote,
+            .format-audio,
+            .format-link,
+            .format-quote{
+                background: <?php echo get_theme_mod('main_color'); ?>;
+            }
+            <?php endif;?>
             #header-cntnr{
                 background-color: #222;
             }
@@ -78,23 +119,14 @@ function zero_customize_css()
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-
             .entry-title,
             .comment-reply-link,
-            .entry-title-link a:hover,
             .wp-playlist-playing .wp-playlist-caption,
             .wp-playlist-playing .wp-playlist-item-length,
             .header-menu-active
             {
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
-
-            .entry-header-quote .entry-title,
-            .entry-header-audio .entry-title
-            {
-                color: #fff !important;
-            }
-
             .comment-form-author, .comment-form-email, .comment-form-url{
                 border-bottom: 2px <?php echo get_theme_mod('main_color'); ?> solid;
             }
@@ -103,9 +135,6 @@ function zero_customize_css()
                 border: 2px <?php echo get_theme_mod('main_color'); ?> solid;
             }
             /*background color*/
-            .format-quote,
-            .format-audio,
-            .format-link,
             .tag a,
             .entry-content blockquote,
             #wp-calendar tbody td a,
