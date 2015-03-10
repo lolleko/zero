@@ -81,6 +81,9 @@ function zero_customize_css()
             .format-quote{
                 background: <?php echo get_theme_mod('main_color'); ?>;
             }
+            .wp-playlist{
+                background: <?php echo get_theme_mod('main_color'); ?> !important;
+            }
             <?php endif;?>
             #header-cntnr{
                 background-color: #222;
@@ -123,7 +126,8 @@ function zero_customize_css()
             .comment-reply-link,
             .wp-playlist-playing .wp-playlist-caption,
             .wp-playlist-playing .wp-playlist-item-length,
-            .header-menu-active
+            .header-menu-active,
+            .entry-content blockquote
             {
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
@@ -136,16 +140,12 @@ function zero_customize_css()
             }
             /*background color*/
             .tag a,
-            .entry-content blockquote,
             #wp-calendar tbody td a,
             #comment-form-respond-container input[type=submit]
             {
                 background: <?php echo get_theme_mod('main_color'); ?>;
             }
             /*bgcolor important*/
-            .wp-playlist{
-                background: <?php echo get_theme_mod('main_color'); ?> !important;
-            }
          </style>
     <?php
 }
