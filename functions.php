@@ -57,6 +57,9 @@ function zero_customize_css()
             .format-quote .entry-content{
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
+            .entry-content blockquote{
+                color: <?php echo get_theme_mod('main_color'); ?>;
+            }
             .wp-playlist-caption, .wp-playlist-item-length{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
@@ -97,7 +100,7 @@ function zero_customize_css()
             .format-audio,
             .format-link,
             .format-quote{
-                background: <?php echo get_theme_mod('main_color'); ?>;
+                background: <?php echo get_theme_mod('main_color'); ?> !important;
             }
             .wp-playlist{
                 background: <?php echo get_theme_mod('main_color'); ?> !important;
@@ -151,7 +154,6 @@ function zero_customize_css()
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .entry-title,
             .comment-reply-link,
             .header-menu-active,
             .entry-content blockquote
