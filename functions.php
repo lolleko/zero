@@ -3,13 +3,23 @@ defined('ABSPATH') or die("No script kiddies please!");
 
 function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'main_color' , array(
-            'default'     => '#D74E3E',
+            'default'     => '#e14d43',
             'transport'   => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_color', array(
-            'label'        => __( 'Main color', 'zero' ),
+            'label'        => __( 'Main Color', 'zero' ),
             'section'    => 'colors',
             'settings'   => 'main_color',
+    ) ) );
+
+    $wp_customize->add_setting( 'header_bg_color' , array(
+            'default'     => '#363b3f',
+            'transport'   => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bg_color', array(
+            'label'        => __( 'Header Background Color', 'zero' ),
+            'section'    => 'colors',
+            'settings'   => 'header_bg_color',
     ) ) );
 
     $wp_customize->add_setting( 'post_format_color' , array(
@@ -102,8 +112,11 @@ function zero_customize_css()
             .format-quote .entry-content{
                 color: #fff;
             }
+            .format-quote .entry-content blockquote{
+                color: #fff !important;
+            }
             .entry-content blockquote{
-                color: #fff;
+                color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .format-quote,
             .format-audio,
@@ -127,7 +140,7 @@ function zero_customize_css()
             }
             <?php endif;?>
             #header-cntnr{
-                background-color: #222;
+                background-color: <?php echo get_theme_mod('header_bg_color'); ?>;
             }
             #header-inner{
                 color:white;

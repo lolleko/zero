@@ -244,11 +244,10 @@ a:visited {
 	width: auto;
 	line-height: 1.45;
 	padding-top: 30px;
-	padding-left: 45px;
+	padding-left: 25px;
 	padding-right: 45px;
     padding-bottom: 30px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 22px;
 	position: relative;
 	color: #fff;
 }
@@ -258,7 +257,7 @@ a:visited {
 	content: '\f106';
 	font-size: 50px;
 	position: absolute;
-	left: 20px;
+	left: 0;
 	top: 0;
 }
 
@@ -345,7 +344,6 @@ a:visited {
     padding: 0 5% 0 5%;
 }
 .format-quote blockquote{
-    padding-bottom: 0;
     margin: 0;
     padding: 0;
 }
@@ -659,7 +657,6 @@ a:visited {
     border-bottom: #e2e2e2 2px solid;
     padding-bottom: 10px;
     font-family: BebasKai;
-    color: #222;
 }
 .sidebar-widget{
     vertical-align: top;
