@@ -147,7 +147,6 @@ function zero_customize_css()
             .menu-item:focus,
             .current-menu-item,
             .sidebar-title,
-            .entry-title,
             .format-standard .entry-content a,
             .format-gallery .entry-content a,
             .format-aside .entry-content a,
@@ -159,7 +158,8 @@ function zero_customize_css()
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .comment-reply-link,
-            .header-menu-active
+            .header-menu-active,
+            .entry-title
             {
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
