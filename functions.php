@@ -60,11 +60,21 @@ function zero_customize_css()
             .wp-playlist-caption, .wp-playlist-item-length{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
+            .wp-playlist-playing{
+                background: <?php echo get_theme_mod('main_color'); ?> !important;
+            }
             .wp-playlist-playing .wp-playlist-caption,
             .wp-playlist-playing .wp-playlist-item-length{
                 color: #fff !important;
                 background: <?php echo get_theme_mod('main_color'); ?> !important;
             }
+            .format-quote .mejs-controls .mejs-time-rail .mejs-time-current{
+                background: #fff;
+            }
+            .format-audio .mejs-container, .format-audio .mejs-controls{
+                background: <?php echo get_theme_mod('main_color'); ?> !important;
+            }
+
             <?php else : ?>
             .entry-title-link a:hover{
                 background-color: #fff;
@@ -99,6 +109,9 @@ function zero_customize_css()
             .wp-playlist-playing .wp-playlist-item-length{
                 color: <?php echo get_theme_mod('main_color'); ?> !important;
                 background: #fff !important;
+            }
+            .format-audio .mejs-container, .format-audio .mejs-controls{
+                background: none !important;
             }
             <?php endif;?>
             #header-cntnr{

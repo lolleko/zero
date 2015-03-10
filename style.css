@@ -884,9 +884,6 @@ a:visited {
 .wp-playlist .wp-playlist-current-item img{
     max-width: 75px !important;
 }
-.format-audio .mejs-container, .format-audio .mejs-controls{
-    background: none !important;
-}
 /*media queries*/
 @media screen and (max-width: 670px) {
     .format-video iframe:first-of-type {
