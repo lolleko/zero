@@ -7,10 +7,32 @@ function zero_customize_register( $wp_customize ) {
             'transport'   => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_color', array(
-            'label'        => __( 'Main Color', 'zero' ),
+            'label'        => __( 'Main color', 'zero' ),
             'section'    => 'colors',
             'settings'   => 'main_color',
     ) ) );
+
+    $wp_customize->add_setting( 'post_format_color' , array(
+            'default'     => 'color',
+            'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'post_format_color',
+        array(
+            'label'          => __( 'Post formats main color?', 'zero' ),
+            'section'        => 'colors',
+            'settings'       => 'post_format_color',
+            'type'           => 'radio',
+            'choices'        => array(
+                'color'  => __( 'Colored background white text' ),
+                'white'   => __( 'White background colored text' )
+            )
+        )
+    )
+    );
 
 }
 add_action( 'customize_register', 'zero_customize_register' );
