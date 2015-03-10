@@ -96,6 +96,9 @@ function zero_customize_css()
             .format-quote .entry-content{
                 color: #fff;
             }
+            .entry-content blockquote{
+                color: #fff;
+            }
             .format-quote,
             .format-audio,
             .format-link,
@@ -155,8 +158,7 @@ function zero_customize_css()
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .comment-reply-link,
-            .header-menu-active,
-            .entry-content blockquote
+            .header-menu-active
             {
                 color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
