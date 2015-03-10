@@ -91,7 +91,7 @@ function zero_customize_css()
             }
             .entry-title-link{
                 background-color: <?php echo get_theme_mod('main_color'); ?> !important;
-                color: #fff;
+                color: #fff !important;
             }
             .entry-header-quote .entry-title,
             .entry-header-audio .entry-title,
