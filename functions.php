@@ -41,10 +41,16 @@ function zero_customize_css()
 {
     ?>
          <style type="text/css">
+            .comment-reply-link,
+            .header-menu-active,
+            .entry-title
+            {
+                color: <?php echo get_theme_mod('main_color'); ?>!important;
+            }
             <?php if ( get_theme_mod('post_format_color') == 'white' ) : ?>
             .entry-title-link{
                 background-color: #fff;
-                color: <?php echo get_theme_mod('main_color'); ?>;
+                color: <?php echo get_theme_mod('main_color'); ?> !important;
             }
             .entry-title-link a:hover{
                 background-color: <?php echo get_theme_mod('main_color'); ?>;
@@ -84,7 +90,7 @@ function zero_customize_css()
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
             .entry-title-link{
-                background-color: <?php echo get_theme_mod('main_color'); ?>;
+                background-color: <?php echo get_theme_mod('main_color'); ?> !important;
                 color: #fff;
             }
             .entry-header-quote .entry-title,
@@ -156,12 +162,6 @@ function zero_customize_css()
             #header-menu:active
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
-            }
-            .comment-reply-link,
-            .header-menu-active,
-            .entry-title
-            {
-                color: <?php echo get_theme_mod('main_color'); ?>!important;
             }
             .comment-form-author, .comment-form-email, .comment-form-url{
                 border-bottom: 2px <?php echo get_theme_mod('main_color'); ?> solid;
