@@ -147,6 +147,7 @@ function zero_customize_css()
             .menu-item:focus,
             .current-menu-item,
             .sidebar-title,
+            .entry-title,
             .format-standard .entry-content a,
             .format-gallery .entry-content a,
             .format-aside .entry-content a,
