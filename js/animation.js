@@ -39,7 +39,7 @@ jQuery(document).ready(function ($) {
     } );
 
     var toggle = false;
-    $('#header-menu').click( function(event){
+    $('#header-menu').on('click touchstart', function(event){
         event.stopPropagation();
         $('#sidebar-cntnr').animate({width: 'toggle'},200);
         if(!toggle){
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(document).on('click touchend', function(){
+    $(document).on('click touchstart', function(){
         $('#sidebar-cntnr').hide();
         $('#header-menu').removeClass('header-menu-active');
         $(document.body).css('overflow', 'scroll');
