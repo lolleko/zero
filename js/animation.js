@@ -47,24 +47,24 @@ jQuery(document).ready(function ($) {
             $('#header-menu').addClass('header-menu-active');
             $(document.body).css('overflow', 'hidden');
             $('#page-wrap').stop(true,true).fadeTo(200, 0.6);
-            $('#page-wrap').css('pointer-events', 'none');
+            $('#page-cntnr, #header-image-cntnr').css('pointer-events', 'none');
             toggle = true;
         }else{
             $('#header-menu').removeClass('header-menu-active');
             $(document.body).css('overflow', 'scroll');
             $('#page-wrap').stop(true,true).fadeTo(200, 1);
-            $('#page-wrap').css('pointer-events', 'auto');
+            $('#page-cntnr, #header-image-cntnr').css('pointer-events', 'auto');
             toggle = false;
         }
     });
 
-    $(document).on('touchend click', function(){
+    $('#page-wrap').on('touchend click', function(){
         event.stopPropagation();
         $('#sidebar-cntnr').hide();
         $('#header-menu').removeClass('header-menu-active');
         $(document.body).css('overflow', 'scroll');
         $('#page-wrap').stop(true,true).fadeTo(200, 1);
-        $('#page-wrap').css('pointer-events', 'auto');
+        $('#page-cntnr, #header-image-cntnr').css('pointer-events', 'auto');
         toggle = false;
     });
 
