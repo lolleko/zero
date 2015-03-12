@@ -671,7 +671,7 @@ a:visited {
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
-.sidebar-widget ul,li{
+.sidebar-widget ul, .sidebar-widget li{
 	list-style: none;
     padding-left:0;
 }
