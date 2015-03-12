@@ -39,8 +39,9 @@ jQuery(document).ready(function ($) {
     } );
 
     var toggle = false;
-    $('#header-menu').on('click touchstart', function(event){
+    $('#header-menu').on('touchend click', function(event){
         event.stopPropagation();
+        event.preventDefault();
         $('#sidebar-cntnr').animate({width: 'toggle'},200);
         if(!toggle){
             $('#header-menu').addClass('header-menu-active');
@@ -57,7 +58,8 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(document).on('click touchstart', function(){
+    $(document).on('touchend click', function(){
+        event.stopPropagation();
         $('#sidebar-cntnr').hide();
         $('#header-menu').removeClass('header-menu-active');
         $(document.body).css('overflow', 'scroll');
