@@ -645,13 +645,16 @@ a:visited {
     width: 80%;
     max-width: 500px;
     bottom: 0;
-    overflow-y: auto;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
     background: #fff;
     z-index: 100;
     display: none;
     border-left: solid 1px #e2e2e2;
 }
 #sidebar-inner{
+    -webkit-transform: translateZ(0);
+    position: static;
     width: 70%;
     max-width: 500px;
     margin-left: auto;
