@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(document).click( function(){
+    $(document).on('click touch', function(){
         $('#sidebar-cntnr').hide();
         $('#header-menu').removeClass('header-menu-active');
         $(document.body).css('overflow', 'scroll');
