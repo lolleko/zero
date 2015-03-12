@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 
     $container.imagesLoaded(function(){
         $container.masonry({
-            itemSelector: '.post',
+            itemSelector: '.post, .page',
             "gutter": 40
         });
 

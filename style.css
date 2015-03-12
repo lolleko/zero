@@ -163,6 +163,9 @@ a:visited {
     opacity: 0;
     width: 770px;
 }
+.page{
+    margin-top: 40px;
+}
 .post p{
 	margin-top: 32px;
 	margin-bottom: 32px;
