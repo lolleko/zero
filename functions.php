@@ -12,6 +12,16 @@ function zero_customize_register( $wp_customize ) {
             'settings'   => 'main_color',
     ) ) );
 
+    $wp_customize->add_setting( 'header_tagline_color' , array(
+            'default'     => '#ffffff',
+            'transport'   => 'refresh',
+    ) );
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_tagline_color', array(
+            'label'        => __( 'Header Tagline Color', 'zero' ),
+            'section'    => 'colors',
+            'settings'   => 'header_tagline_color',
+    ) ) );
+
     $wp_customize->add_setting( 'header_bg_color' , array(
             'default'     => '#363b3f',
             'transport'   => 'refresh',
@@ -241,7 +251,7 @@ function zero_customize_css()
                 background-color: <?php echo get_theme_mod('header_bg_color'); ?>;
             }
             #header-inner{
-                color:white;
+                color: <?php echo get_theme_mod('header_tagline_color'); ?>;
             }
             #footer-cntnr{
                 color: white;

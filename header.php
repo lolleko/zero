@@ -7,24 +7,22 @@
 	</head>
 	<body class="custom-background">
 		<header id="header-cntnr">
+            <div id="header-inner">
             <?php if ( get_theme_mod('menu_position') == 'left' ) : ?>
-            <div id="header-inner">
                 <button id="header-menu"></button>
-            </div>
 			 <?php endif;?>
-		    <div id="header-title-cntnr">
-                <span id="header-title-inner">
-                    <a id="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-                        <?php bloginfo( 'name' ); ?>
-                    </a>
-                </span>
-                <span id="header-title-description"><?php bloginfo( 'description'); ?></span>
-            </div>
+                <div id="header-title-cntnr">
+                    <span id="header-title-inner">
+                        <a id="header-title-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                            <?php bloginfo( 'name' ); ?>
+                        </a>
+                    </span>
+                    <span id="header-title-description"><?php bloginfo( 'description'); ?></span>
+                </div>
 			<?php if ( get_theme_mod('menu_position') == 'right' ) : ?>
-            <div id="header-inner">
                 <button id="header-menu"></button>
-            </div>
             <?php endif;?>
+            </div>
 		</header>
             <?php get_sidebar(); ?>
 		<div id="page-wrap">
