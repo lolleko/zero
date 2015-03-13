@@ -119,7 +119,6 @@ a:visited {
 #header-title-cntnr{
     float: left;
     font-size: 32px;
-	margin-left: 5%;
 	max-width: 700px;
 	z-index: 2;
 }
@@ -136,8 +135,9 @@ a:visited {
 #header-menu{
     width: 48px;
     height: 48px;
-    float: right;
     padding-top: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
     background: none;
     border: none;
     outline: none;
@@ -641,9 +641,8 @@ a:visited {
 #sidebar-cntnr{
 	position: fixed;
     top: 48px;
-    right: 0;
     width: 80%;
-    max-width: 500px;
+    max-width: 400px;
     bottom: 0;
     overflow-y: scroll !important;
     -webkit-overflow-scrolling: touch !important;
@@ -655,28 +654,30 @@ a:visited {
 #sidebar-inner{
     -webkit-transform: translateZ(0);
     position: static;
-    width: 70%;
+    width: 85%;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 .sidebar-title{
 	font-weight: bold;
-    font-size: 24px;
-    border-bottom: #e2e2e2 2px solid;
-    padding-bottom: 10px;
-    font-family: BebasKai;
+    font-size: 1em;
 }
 .sidebar-widget{
     vertical-align: top;
     width: 100%;
     display: block;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    font-size: 0.9em;
 }
 .sidebar-widget ul, .sidebar-widget li{
 	list-style: none;
     padding-left:0;
+}
+.sidebar-widget li{
+    padding-top: 15px;
+    padding-left: 30px;
 }
 /*Sidebar END*/
 

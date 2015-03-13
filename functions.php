@@ -32,7 +32,7 @@ function zero_customize_register( $wp_customize ) {
         $wp_customize,
         'post_format_color',
         array(
-            'label'          => __( 'Post formats main color?', 'zero' ),
+            'label'          => __( 'Color of post formats.', 'zero' ),
             'section'        => 'colors',
             'settings'       => 'post_format_color',
             'type'           => 'radio',
@@ -43,6 +43,25 @@ function zero_customize_register( $wp_customize ) {
         )
     )
     );
+
+    $wp_customize->add_setting( 'menu_position' , array(
+            'default'     => 'left',
+            'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control(
+	'menu_position',
+	array(
+		'label'    => __( 'Menu position', 'zero' ),
+		'section'  => 'colors',
+		'settings' => 'menu_position',
+		'type'     => 'radio',
+		'choices'  => array(
+			'left'  => 'left',
+			'right' => 'right',
+		),
+	)
+);
 
 }
 add_action( 'customize_register', 'zero_customize_register' );
@@ -109,7 +128,8 @@ function zero_customize_css()
                 color: #fff !important;
             }
             .entry-footer-white,
-            .format-quote .entry-content{
+            .format-quote .entry-content,
+            .format-audio .entry-content{
                 color: #fff;
             }
             .format-quote .entry-content blockquote{
@@ -139,6 +159,24 @@ function zero_customize_css()
                 background: none !important;
             }
             <?php endif;?>
+            <?php if ( get_theme_mod('menu_position') == 'left' ) : ?>
+            #header-menu{
+                float:left;
+            }
+            #sidebar-cntnr{
+                left: 0;
+            }
+            <?php else : ?>
+            #header-menu{
+                float:right;
+            }
+            #sidebar-cntnr{
+                right: 0;
+            }
+            #header-title-cntnr{
+                margin-left: 5%;
+            }
+            <?php endif;?>
             #header-cntnr{
                 background-color: <?php echo get_theme_mod('header_bg_color'); ?>;
             }
@@ -165,7 +203,7 @@ function zero_customize_css()
             .menu-item:active,
             .menu-item:focus,
             .current-menu-item,
-            .sidebar-title,
+            .sidebar-widget a,
             .format-standard .entry-content a,
             .format-gallery .entry-content a,
             .format-aside .entry-content a,
