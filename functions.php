@@ -375,10 +375,6 @@ add_theme_support( 'html5', array(
     'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 ) );
 
-add_theme_support( 'infinite-scroll', array(
-    'container' => 'page-cntnr',
-) );
-
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 function filter_ptags_on_images($content){

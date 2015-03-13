@@ -10,5 +10,6 @@ get_header();
 	?>
 		<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 		<?php endif; ?>
+		<div class="clear"></div>
 <?php
 get_footer();

@@ -24,20 +24,6 @@ jQuery(document).ready(function ($) {
         });
 	});
 
-    $( document.body ).on( 'post-load', function () {
-        $container.masonry( 'reloadItems' );
-
-        $container.imagesLoaded(function(){
-            $container.masonry({
-                itemSelector: '.post'
-            });
-
-            $(".post").fadeIn();
-        });
-
-        $container.masonry( 'reloadItems' );
-    } );
-
     var toggle = false;
     $('#header-menu').on('click', function(event){
         event.stopPropagation();
@@ -70,5 +56,5 @@ jQuery(document).ready(function ($) {
             toggle = false;
         }
     });
-});
 
+});
