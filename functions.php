@@ -45,7 +45,7 @@ function zero_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_setting( 'menu_position' , array(
-            'default'     => 'left',
+            'default'     => 'right',
             'transport'   => 'refresh',
     ) );
 
@@ -57,11 +57,30 @@ function zero_customize_register( $wp_customize ) {
 		'settings' => 'menu_position',
 		'type'     => 'radio',
 		'choices'  => array(
-			'left'  => 'left',
-			'right' => 'right',
+			'left'  => __( 'Left' ),
+			'right' => __( 'Right' ),
 		),
 	)
-);
+    );
+
+    $wp_customize->add_setting( 'menu_screen_size' , array(
+            'default'     => 'false',
+            'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control(
+	'menu_screen_size',
+	array(
+		'label'    => __( 'Display menu if screen large enough?', 'zero' ),
+		'section'  => 'colors',
+		'settings' => 'menu_screen_size',
+		'type'     => 'radio',
+		'choices'  => array(
+			'true'  => __( 'Yes' ),
+			'false' => __( 'No' ),
+		),
+	)
+    );
 
 }
 add_action( 'customize_register', 'zero_customize_register' );
@@ -166,6 +185,9 @@ function zero_customize_css()
             #sidebar-cntnr{
                 left: 0;
             }
+            #header-title-cntnr{
+                margin-left: 8px;
+            }
             <?php else : ?>
             #header-menu{
                 float:right;
@@ -175,6 +197,44 @@ function zero_customize_css()
             }
             #header-title-cntnr{
                 margin-left: 5%;
+            }
+            <?php endif;?>
+
+            /*Menu stays open*/
+            <?php if ( get_theme_mod('menu_screen_size') == 'true' ) : ?>
+            @media screen and (min-width: 1080px) {
+            <?php if ( get_theme_mod('menu_position') == 'left' ) : ?>
+                #page-wrap{
+                    margin-left: 300px;
+                }
+            <?php else : ?>
+                #page-wrap{
+                    margin-right: 300px;
+                }
+            <?php endif;?>
+                #sidebar-cntnr{
+                    display: block !important;
+                }
+                #header-menu{
+                    display: none;
+                }
+            }
+            @media screen and (min-width: 1920px) {
+                #page-cntnr{
+                    width: 1580px;
+                }
+                #header-image-cntnr{
+                    width: 1580px;
+                }
+            }
+            <?php else : ?>
+            @media screen and (min-width: 1600px) {
+                #page-cntnr{
+                    width: 1580px;
+                }
+                #header-image-cntnr{
+                    width: 1580px;
+                }
             }
             <?php endif;?>
             #header-cntnr{
