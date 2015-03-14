@@ -236,6 +236,9 @@ function zero_customize_css()
                 #header-image-cntnr{
                     width: 1580px;
                 }
+                #footer-cntnr{
+                    width: 1580px;
+                }
             }
             <?php else : ?>
             @media screen and (min-width: 1600px) {
@@ -245,6 +248,9 @@ function zero_customize_css()
                 #header-image-cntnr{
                     width: 1580px;
                 }
+                #footer-cntnr{
+                    width: 1580px;
+                }
             }
             <?php endif;?>
             #header-cntnr{
@@ -252,10 +258,6 @@ function zero_customize_css()
             }
             #header-inner{
                 color: <?php echo get_theme_mod('header_tagline_color'); ?>;
-            }
-            #footer-cntnr{
-                color: white;
-                background-color: #222;
             }
             .post, .type-page{
                 background-color: white;
@@ -293,6 +295,7 @@ function zero_customize_css()
             }
             /*background color*/
             .tag a,
+            .tagcloud a,
             #wp-calendar tbody td a,
             #comment-form-respond-container input[type=submit]
             {
@@ -326,31 +329,13 @@ function zero_widgets_init() {
         'before_title' => '<div class="sidebar-title">',
         'after_title' => '</div>',
     ) );
-    //footer1
+    //footer
     register_sidebar( array(
-        'name' => 'First Footer Widget Area',
-        'id' => 'footer_widget_area1',
-        'before_widget' => '<div class="footer-widget">',
+        'name' => 'Footer Widget Area',
+        'id' => 'footer_widget_area',
+        'before_widget' => '<div class="sidebar-widget">',
         'after_widget' => '</div>',
-        'before_title' => '<div class="footer-title">',
-        'after_title' => '</div>',
-    ) );
-    //footer2
-    register_sidebar( array(
-        'name' => 'Second Footer Widget Area',
-        'id' => 'footer_widget_area2',
-        'before_widget' => '<div class="footer-widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<div class="footer-title">',
-        'after_title' => '</div>',
-    ) );
-    //footer3
-    register_sidebar( array(
-        'name' => 'Third Footer Widget Area',
-        'id' => 'footer_widget_area3',
-        'before_widget' => '<div class="footer-widget">',
-        'after_widget' => '</div>',
-        'before_title' => '<div class="footer-title">',
+        'before_title' => '<div class="sidebar-title">',
         'after_title' => '</div>',
     ) );
 }
