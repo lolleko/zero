@@ -715,8 +715,7 @@ a:visited {
 #footer-widget-area{
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
 }
 .footer-widget ul{
 	list-style: none;
@@ -818,6 +817,7 @@ a:visited {
     margin-top: 10px;
 }
 #comment-form-respond-container input[type=submit]{
+    -webkit-appearance: none;
     color: white;
     padding: 4px;
     cursor: pointer;

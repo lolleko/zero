@@ -191,6 +191,7 @@ function zero_customize_css()
             <?php if ( get_theme_mod('menu_position') == 'left' ) : ?>
             #header-menu{
                 float:left;
+                color: <?php echo get_theme_mod('header_tagline_color'); ?>;
             }
             #sidebar-cntnr{
                 left: 0;
@@ -201,6 +202,7 @@ function zero_customize_css()
             <?php else : ?>
             #header-menu{
                 float:right;
+                color: <?php echo get_theme_mod('header_tagline_color'); ?>;
             }
             #sidebar-cntnr{
                 right: 0;
