@@ -231,7 +231,7 @@ function zero_customize_css()
                     display: none;
                 }
             }
-            @media screen and (min-width: 1920px) {
+            @media screen and (min-width: 1910px) {
                 #page-cntnr{
                     width: 1580px;
                 }
@@ -266,8 +266,7 @@ function zero_customize_css()
             }
             #header-title-inner
             {
-                color: #fff;
-                background-color: <?php echo '#' . get_header_textcolor(); ?>;
+                color: <?php echo '#' . get_header_textcolor(); ?>;
             }
             .search-form{
                 border-color: <?php echo get_theme_mod('main_color'); ?>;
@@ -356,6 +355,7 @@ add_filter( 'the_content_more_link', 'modify_read_more_link' );
 $headerArgs = array(
     'width'         => 1440,
     'height'        => 400,
+    'default-text-color' => 'ffffff'
 );
 add_theme_support( 'custom-header', $headerArgs );
 
