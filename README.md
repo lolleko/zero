@@ -1,7 +1,7 @@
 zero
 =======
 
-## IMPORTANT This theme is still in development. ##
+### IMPORTANT This theme is still in development. ###
 
 A Wordpress Theme.
 
@@ -9,11 +9,11 @@ A Wordpress Theme.
 (screenshot.png?raw=true)
 
 ### Features ###
-*responsive design
-*unique post formats (e.g. icons for link post format)
-*almost borderless (zero)
-*masonry layout
-*customizable
+* responsive design
+* unique post formats (e.g. icons for link post format)
+* almost borderless (zero)
+* masonry layout
+* customizable
 
 ### Roadmap ###
 *	More Customization
