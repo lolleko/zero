@@ -1,15 +1,20 @@
-wp-zero
+zero
 =======
 
-## IMPORTANT This theme is in an early stage of development. Use at your own risk. ##
+## IMPORTANT This theme is still in development. ##
 
 A Wordpress Theme.
 
 ![Image of Theme]
 (screenshot.png?raw=true)
 
+### Features ###
+*responsive design
+*unique post formats (e.g. icons for link post format)
+*almost borderless (zero)
+*masonry layout
+*customizable
+
 ### Roadmap ###
-*   Finish basic Wordpress functionality (comments, footer, etc.)
-*   Optimization for mobile devices
 *	More Customization
 *	Lots of tidying
