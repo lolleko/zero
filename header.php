@@ -26,11 +26,11 @@
 		</header>
             <?php get_sidebar(); ?>
 		<div id="page-wrap">
-            <div id="header-image-cntnr">
             <?php if ( get_header_image() ):?>
+            <div id="header-image-cntnr">
                 <a id="header-image-cntnt" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <img id="header-image" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
                 </a>
-            <?php endif; ?>
             </div>
+            <?php endif; ?>
 			<div id="page-cntnr">

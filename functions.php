@@ -287,8 +287,11 @@ function zero_customize_css()
             {
                 color: <?php echo get_theme_mod('main_color'); ?>;
             }
-            .comment-form-author, .comment-form-email, .comment-form-url{
+            .comment-form-author, .comment-form-email, .comment-form-url {
                 border-bottom: 2px <?php echo get_theme_mod('main_color'); ?> solid;
+            }
+            pre {
+            border-left: 2px solid <?php echo get_theme_mod('main_color'); ?>
             }
 
             #comment-form-respond-container textarea{
