@@ -14,7 +14,7 @@
             <?php the_tags('<div class="tag">','</div><div class="tag">','</div>'); ?>
         </div>
         <div class="entry-date">
-            <?php echo get_the_date(); ?>
+            <a class="date-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo get_the_date(); ?></a>
         </div>
     </div>
 </article>

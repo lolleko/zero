@@ -13,7 +13,7 @@
             <?php the_author_posts_link(); ?>
         </div>
         <div class="entry-date-white">
-            <?php echo get_the_date(); ?>
+            <a class="date-title" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php echo get_the_date(); ?></a>
         </div>
     </div>
 </article>
