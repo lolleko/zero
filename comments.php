@@ -14,6 +14,12 @@ if ( post_password_required() ) {
 					number_format_i18n( get_comments_number() ), get_the_title() );
 			?>
 		</div>
+        <?php
+        if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+        ?>
+		    <div class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></div>
+	   <?php endif; ?>
+
 			<?php
 				wp_list_comments( array(
 					'style'       => 'div',
@@ -25,12 +31,6 @@ if ( post_password_required() ) {
 		</div>
 
 	<?php endif;?>
-
-	<?php
-		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
-	<?php endif; ?>
 
     <div id="comment-form-respond-container" class="post">
 	    <?php comment_form(); ?>

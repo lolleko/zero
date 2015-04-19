@@ -1,13 +1,13 @@
 /*
 Theme Name: Zero
-Theme URI:
+Theme URI: https://github.com/lolleko/zero
 Author: Lolle
-Author URI:
-Description: 
-Version: 0.1
+Author URI: https://github.com/lolleko
+Description: The idea of this theme was to have zero borders. Although it does not fulfil this goal comepletly, it is still a modern, responsive and clean theme. The theme features some color customization, custom post formats with unique styling and a masonry layout which really beginns to shine on larger screens (1080p and upwards).
+Version: 1.0
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags:
+Tags: colors, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, post-formats, sticky-post, masonry
 Text Domain: zero
 */
 @font-face {
@@ -230,14 +230,13 @@ dt{
     padding: 20px;
 }
 .sticky:before{
-    font-family: Genericons;
+    font-family: BebasKai;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    font-size: 1.5em;
-    color: green;
-    content: '\f408';
+    font-size: 0.975em;
+    content: 'featured';
     float: right;
 }
 /*Entry Header End*/
@@ -371,7 +370,7 @@ dt{
 
 /*Animation stuff*/
 .entry-footer-fade{
-	display: none;
+    display: none;
 	position: absolute;
 }
 .post:hover .entry-footer-fade {
@@ -522,10 +521,6 @@ dt{
 	height: 433.125px !important;
     margin-bottom: 96px;
 }
-.format-video .mejs-container{
-    width: 100% !important;
-    height: 100% !important;
-}
 .format-video .mejs-container-fullscreen{
     width: 100% !important;
     height: 100% !important;
@@ -571,81 +566,70 @@ dt{
 /*Image Content END*/
 
 /*Content gallery*/
+/*Gallery styles from tweentyfifteen*/
 .gallery {
-    margin: 20px auto 20px;
+	margin-bottom: 1.6em;
 }
-.gallery dd{
-    margin-left: 0;
-}
-.gallery .gallery-item {
-	float: left;
+
+.gallery-item {
+	display: inline-block;
 	text-align: center;
-    max-width: 100%;
-    margin:0px 4px 4px 0px;
-}
-.gallery-columns-1 .gallery-item {
-	max-width: 100%;
+	vertical-align: top;
+	width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-	max-width: 48%;
-	max-width: -webkit-calc(50% - 4px);
-	max-width:         calc(50% - 4px);
+	max-width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-	max-width: 32%;
-	max-width: -webkit-calc(33.3% - 4px);
-	max-width:         calc(33.3% - 4px);
+	max-width: 33.33%;
 }
 
 .gallery-columns-4 .gallery-item {
-	max-width: 23%;
-	max-width: -webkit-calc(25% - 4px);
-	max-width:         calc(25% - 4px);
+	max-width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-	max-width: 19%;
-	max-width: -webkit-calc(20% - 4px);
-	max-width:         calc(20% - 4px);
+	max-width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-	max-width: 15%;
-	max-width: -webkit-calc(16.7% - 4px);
-	max-width:         calc(16.7% - 4px);
+	max-width: 16.66%;
 }
 
 .gallery-columns-7 .gallery-item {
-	max-width: 13%;
-	max-width: -webkit-calc(14.28% - 4px);
-	max-width:         calc(14.28% - 4px);
+	max-width: 14.28%;
 }
 
 .gallery-columns-8 .gallery-item {
-	max-width: 11%;
-	max-width: -webkit-calc(12.5% - 4px);
-	max-width:         calc(12.5% - 4px);
+	max-width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-	max-width: 9%;
-	max-width: -webkit-calc(11.1% - 4px);
-	max-width:         calc(11.1% - 4px);
+	max-width: 11.11%;
 }
 
-.gallery img {
-
+.gallery-icon img {
+	margin: 0 auto;
 }
-.gallery .gallery-caption {
-	font-size: 14px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-.gallery dl, .gallery dt { margin: 0; }
-.gallery br+br { display: none; }
 
+.gallery-caption {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+    padding: 2px;
+	display: block;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
 /*jetpack*/
 .gallery-row{
     margin-left: auto;
@@ -697,10 +681,12 @@ dt{
     padding-right: 40px;
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
-
+.pagelink{
+    background: #fff;
+}
 /*Sidebar*/
 #sidebar-cntnr{
-	position: fixed;
+    position: fixed;
     top: 48px;
     width: 80%;
     max-width: 300px;
@@ -828,17 +814,22 @@ dt{
     background: none !important;
     box-shadow: none;
 }
-.comment.depth-1{
+.no-comments{
+    padding: 15px;
+}
+.comment.depth-1, .pingback, .trackback, .no-comments{
     margin-top: 40px;
     background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
-.comment{
+.comment, .pingback, .trackback, .no-comments{
     margin-top: 40px;
     font-size: 13px;
 }
 .comments-title{
     padding: 5%;
     background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 #respond{
     padding: 5%;
@@ -917,6 +908,10 @@ dt{
 /*AUDIO*/
 .wp-playlist{
     border: none !important;
+}
+.mejs-audio{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .wp-playlist .mejs-container{
     width: 100% !important;
@@ -1052,7 +1047,10 @@ dt{
         -ms-word-wrap: break-word;
         border-bottom: 1px solid rgba(240,240,240,0.5);
     }
-    .comment.depth-1{
+    .entry-footer-fade{
+        display: block;
+    }
+    .comment.depth-1, .pingback, .trackback, .no-comments{
         margin-top: 0;
     }
 }

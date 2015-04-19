@@ -13,7 +13,7 @@ function zero_customize_register( $wp_customize ) {
     ) ) );
 
     $wp_customize->add_setting( 'header_tagline_color' , array(
-            'default'     => '#ffffff',
+            'default'     => '#222222',
             'transport'   => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_tagline_color', array(
@@ -23,7 +23,7 @@ function zero_customize_register( $wp_customize ) {
     ) ) );
 
     $wp_customize->add_setting( 'header_bg_color' , array(
-            'default'     => '#363b3f',
+            'default'     => '#e14d43',
             'transport'   => 'refresh',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bg_color', array(
@@ -81,7 +81,7 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_control(
 	'menu_screen_size',
 	array(
-		'label'    => __( 'Display menu if screen large enough?', 'zero' ),
+		'label'    => __( 'Display menu permanent on large screens?', 'zero' ),
 		'section'  => 'colors',
 		'settings' => 'menu_screen_size',
 		'type'     => 'radio',
@@ -345,11 +345,6 @@ function zero_widgets_init() {
 }
 add_action( 'widgets_init', 'zero_widgets_init' );
 
-function zero_register_menu() {
-  register_nav_menu('header-menu',__( 'Header Menu' ));
-}
-add_action( 'init', 'zero_register_menu' );
-
 function modify_read_more_link() {
     return '<a class="more-link" href="' . get_permalink() . '"></a>';
 }
@@ -358,12 +353,12 @@ add_filter( 'the_content_more_link', 'modify_read_more_link' );
 $headerArgs = array(
     'width'         => 1440,
     'height'        => 400,
-    'default-text-color' => 'ffffff'
+    'default-text-color' => '#ffffff'
 );
 add_theme_support( 'custom-header', $headerArgs );
 
 $backgroundArgs = array(
-    'default-color' => '000000',
+    'default-color' => '#f1f1f1',
 );
 add_theme_support( 'custom-background', $backgroundArgs );
 

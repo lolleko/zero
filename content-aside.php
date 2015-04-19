@@ -14,5 +14,6 @@
     <div class="entry-content">
         <?php the_content(); ?>
         <?php edit_post_link(''); ?>
+        <div class="pagelink"><?php wp_link_pages('pagelink=<span class="pagenumber">%</span>'); ?></div>
     </div>
 </article>
