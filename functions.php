@@ -1,10 +1,15 @@
 <?php
 defined('ABSPATH') or die("No script kiddies please!");
 
+if ( ! isset( $content_width ) ) {
+	$content_width = 693;
+}
+
 function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'main_color' , array(
             'default'     => '#e14d43',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_hex_color'
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'main_color', array(
             'label'        => __( 'Main Color', 'zero' ),
@@ -15,9 +20,10 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'header_tagline_color' , array(
             'default'     => '#222222',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_hex_color'
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_tagline_color', array(
-            'label'        => __( 'Header Tagline Color', 'zero' ),
+            'label'      => __( 'Header Tagline Color', 'zero' ),
             'section'    => 'colors',
             'settings'   => 'header_tagline_color',
     ) ) );
@@ -25,6 +31,7 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'header_bg_color' , array(
             'default'     => '#e14d43',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_hex_color'
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bg_color', array(
             'label'        => __( 'Header Background Color', 'zero' ),
@@ -35,6 +42,7 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'post_format_color' , array(
             'default'     => 'color',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_choices'
     ) );
 
     $wp_customize->add_control(
@@ -47,8 +55,8 @@ function zero_customize_register( $wp_customize ) {
             'settings'       => 'post_format_color',
             'type'           => 'radio',
             'choices'        => array(
-                'color'  => __( 'Colored background white text' ),
-                'white'   => __( 'White background colored text' )
+                'color'  => 'Colored background white text',
+                'white'   => 'White background colored text'
             )
         )
     )
@@ -57,6 +65,7 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'menu_position' , array(
             'default'     => 'right',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_choices'
     ) );
 
     $wp_customize->add_control(
@@ -67,8 +76,8 @@ function zero_customize_register( $wp_customize ) {
 		'settings' => 'menu_position',
 		'type'     => 'radio',
 		'choices'  => array(
-			'left'  => __( 'Left' ),
-			'right' => __( 'Right' ),
+			'left'  => 'Left',
+			'right' => 'Right',
 		),
 	)
     );
@@ -76,6 +85,7 @@ function zero_customize_register( $wp_customize ) {
     $wp_customize->add_setting( 'menu_screen_size' , array(
             'default'     => 'false',
             'transport'   => 'refresh',
+            'sanitize_callback' => 'sanitize_choices'
     ) );
 
     $wp_customize->add_control(
@@ -86,14 +96,26 @@ function zero_customize_register( $wp_customize ) {
 		'settings' => 'menu_screen_size',
 		'type'     => 'radio',
 		'choices'  => array(
-			'true'  => __( 'Yes' ),
-			'false' => __( 'No' ),
+			'true'  => 'Yes',
+			'false' => 'No',
 		),
 	)
     );
 
 }
 add_action( 'customize_register', 'zero_customize_register' );
+
+function sanitize_choices( $input, $setting ) {
+    global $wp_customize;
+
+    $control = $wp_customize->get_control( $setting->id );
+
+    if ( array_key_exists( $input, $control->choices ) ) {
+        return $input;
+    } else {
+        return $setting->default;
+    }
+}
 
 function zero_customize_css()
 {
@@ -369,6 +391,10 @@ add_theme_support( 'post-thumbnails', array( 'post' ) );
 add_theme_support( 'html5', array(
     'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 ) );
+
+add_theme_support( 'automatic-feed-links' );
+
+add_theme_support( 'title-tag' );
 
 add_filter( 'use_default_gallery_style', '__return_false' );
 

@@ -1,13 +1,13 @@
 /*
 Theme Name: Zero
 Theme URI: https://github.com/lolleko/zero
-Author: Lolle
+Author: Lolleko
 Author URI: https://github.com/lolleko
 Description: The idea of this theme was to have zero borders. Although it does not fulfil this goal comepletly, it is still a modern, responsive and clean theme. The theme features some color customization, custom post formats with unique styling and a masonry layout which really beginns to shine on larger screens (1080p and upwards).
 Version: 1.0
 License: GNU General Public License v3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: colors, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, post-formats, sticky-post, masonry
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, featured-images, post-formats, sticky-post
 Text Domain: zero
 */
 @font-face {
@@ -307,8 +307,11 @@ dt{
 	display: inline-block;
 }
 
-.entry-content figcaption{
+.wp-caption-text{
     font-size: 0.7em;
+}
+.wp-caption{
+    margin: 0;
 }
 .entry-content iframe,embed{
     margin-left: auto;
@@ -865,7 +868,10 @@ dt{
     display: inline-block;
     margin-left: 6px;
 }
-.comment p{
+.bypostauthor .comment-author .fn:after{
+    content: '(Author)';
+}
+.comment-content{
     margin-left: 58px;
     margin-right: 58px;
     margin-top: 1em;

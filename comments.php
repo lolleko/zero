@@ -25,12 +25,17 @@ if ( post_password_required() ) {
 					'style'       => 'div',
 					'short_ping'  => true,
 					'avatar_size' => 96,
-                    'max_depth'   => 3
+                    'max_depth'   => 10,
 				) );
 			?>
 		</div>
 
 	<?php endif;?>
+
+    <div id="navigation" class="navigation post">
+        <?php next_comments_link($label='<div id="navigation-right" class="navigation-link">Newer Comments</div>') ?>
+        <?php previous_comments_link($label='<div id="navigation-left" class="navigation-link">Older Comments</div>') ?>
+    </div>
 
     <div id="comment-form-respond-container" class="post">
 	    <?php comment_form(); ?>

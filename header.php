@@ -4,8 +4,9 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 		<?php wp_head(); ?>
 		<meta name="viewport" content="width=device-width, maximum-scale=1">
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 	</head>
-	<body class="custom-background">
+	<body <?php body_class( $class ); ?>>
 		<header id="header-cntnr">
             <div id="header-inner">
             <?php if ( get_theme_mod('menu_position') == 'left' ) : ?>
