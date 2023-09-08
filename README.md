@@ -5,8 +5,7 @@ zero
 
 A Wordpress Theme.
 
-![Image of Theme]
-(screenshot.png?raw=true)
+![Image of Theme](./screenshot.png)
 
 ### Features ###
 * responsive design
